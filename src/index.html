@@ -1,22 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template</title>
+  <title>Алтай</title>
 </head>
 <body>
-  <figure>
-    <img src="./images/rachael.jpg" alt="Rachael">
-    <figcaption>
-      <cite>
-        Rachael:
-      </cite>
-      <blockquote>
-          I'm not in the business. I am the business.
-      </blockquote>
-    </figcaption>
-  </figure>
+  <header>
+    <div class="wrapper">
+      <dl class="logo">
+        <dt class="logo__heading">Altai nomads</dt>
+        <dd class="logo__subheading">современные кочевники</dd>
+      </dl>
+      <nav class="navbar">
+        <ul class="navbar__container">
+          <li class="navbar__item">
+            <a class="navbar__link" href="#" title="Посмотреть программу похода">
+              Программа похода
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#" title="Подробнее о нас">
+              О компании
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#" title="Познакомиться с нашими гидами">
+              Команда
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#" title="Посмотреть фотоотчет с прошлого похода">
+              Галерея
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#" title="Узнать ответы на часто задаваемые вопросы">
+              Faq
+            </a>
+          </li>
+          <li class="navbar__item navbar__item--btn">
+            <a class="navbar__link btn" href="#" title="Оставить заявку на участие в походе">
+              Хочу в поход!
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-btn" role="menu" aria-label="Menu button" tabindex="0">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle">
+          <span class="sr-only">Меню</span>
+        </label>
+      </div>
+    </div>
+  </header>
 </body>
 </html>
