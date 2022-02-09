@@ -436,6 +436,24 @@
         </ul>
       </details>
     </section>
+    <section class="callback">
+      <div class="wrapper">
+        <h2 class="section-title">Оставить заявку</h2>
+        <p class="callback__desc">
+          Оставьте ваш номер телефона, чтобы мы могли вам перезвонить и вместе спланировать ваш поход к горе Белуха.
+        </p>
+        <form class="callback__form flex-container" action="#" method="post" id="callback-form">
+          <input class="callback__phone" type="tel" name="phoneNumber"
+          value="+7"
+          placeholder="+7(999)-999-99-99"
+          pattern="[+]{1}[0-9]{1}[(]{1}[0-9]{3}[)]{1}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          oninvalid="this.setCustomValidity('Введите свой номер телефона в формате +7(xxx)-xxx-xx-xx')"
+          title="Введите свой номер телефона в формате +7(xxx)-xxx-xx-xx"
+          required>
+          <input class="btn btn--callback" type="submit" value="Хочу в поход!">
+        </form>
+      </div>
+    </section>
   </main>
   <footer>
     <span class="copyright">
