@@ -1,0 +1,26 @@
+:root {
+  // Typography
+  --fs-body: clamp(1rem, 1.25vw, 1.125rem);
+  --fs-h1: clamp(5.8125rem, 21vw, 20.1875rem);
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.5rem;
+  --fs-num: clamp(3.125rem, 4vw, 3.9375rem);
+  
+  --fs-xxs: .875rem;
+  --fs-xs: 1rem;
+  --fs-sm: 1.25rem;
+  --fs-md: 1.5rem;
+  --fs-lg: 1.75rem;
+  --fs-xl: 1.875rem;
+  --fs-xxl: clamp(1.6875rem, 4vw, 4rem);
+
+  --leading-body: 1.2;
+  --leading-h1: 1.17;
+  --leading-h2: 1.5;
+
+  --tracking-h2: .2px;
+  --tracking-body: .3px;
+  --tracking-num: -0.7px;
+  --tracking-logo: 1.2px;
+  --tracking-sublogo: 1px;
+}
