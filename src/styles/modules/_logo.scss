@@ -1,0 +1,15 @@
+.logo {
+  &__heading {
+    font-size: var(--fs-md);
+    font-weight: 600;
+    line-height: 0.75;
+    letter-spacing: var(--tracking-logo);
+    text-transform: uppercase;
+  }
+
+  &__subheading {
+    font-size: var(--fs-xxs);
+    line-height: 1.29;
+    letter-spacing: var(--tracking-sublogo);
+  }
+}
