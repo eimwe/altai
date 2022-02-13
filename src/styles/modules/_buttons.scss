@@ -1,0 +1,12 @@
+.btn {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  line-height: 1.125;
+  cursor: pointer;
+
+  &--action {
+    padding: .625em 2em;
+    color: var(--text-clr-body);
+    background-color: var(--text-clr-dark);
+  }
+}
