@@ -1,6 +1,13 @@
 @use '../abstracts/mixins';
 
 .navbar {
+  /* mobile styles only*/
+  position: absolute;
+  top: 28px;
+  right: 800px;
+  opacity: 0;
+  transition: opacity var(--delay);
+
   &__container {
     @include mixins.reset_list;
     gap: 1.0625em;
@@ -11,7 +18,12 @@
 
     /* mobile styles only*/
     flex-direction: column;
-    padding-block: 1.2em;
+    padding: 1.5em;
     background-color: var(--text-clr-body);
+  }
+
+  &--opened {
+    right: 40px;
+    opacity: 1;
   }
 }

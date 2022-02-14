@@ -5,6 +5,7 @@
   cursor: pointer;
 
   &--action {
+    display: block;
     padding: .625em 2em;
     color: var(--text-clr-body);
     background-color: var(--text-clr-dark);
