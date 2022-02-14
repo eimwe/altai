@@ -1,0 +1,9 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  
+  .flex-container {
+    justify-content: flex-end;
+  }
+}
