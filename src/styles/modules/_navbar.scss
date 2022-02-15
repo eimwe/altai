@@ -3,9 +3,10 @@
 .navbar {
   /* mobile styles only*/
   position: absolute;
-  top: 28px;
+  top: 40px;
   right: 800px;
   opacity: 0;
+  box-shadow: 2px 2px 8px 1px var(--text-clr-dark);
   transition: opacity var(--delay);
 
   &__container {
@@ -23,7 +24,7 @@
   }
 
   &--opened {
-    right: 40px;
+    right: 48px;
     opacity: 1;
   }
 }
