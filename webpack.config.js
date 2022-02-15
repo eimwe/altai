@@ -23,7 +23,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
+        test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: 'asset',
         parser: {
           dataUrlCondition: {
@@ -35,7 +35,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpe?g|webp)/i,
+        test: /\.(png|jpe?g|webp|svg)/i,
         type: 'asset/resource',
         generator: {
           filename: (name) => {
