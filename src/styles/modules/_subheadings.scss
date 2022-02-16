@@ -1,0 +1,15 @@
+.level {
+  text-align: center;
+
+  &__title {
+    margin-block-start: 0;
+    margin-block-end: 1em;
+    font-size: var(--fs-h2);
+    line-height: var(--leading-h2);
+    letter-spacing: var(--tracking-h2);
+  }
+
+  &__desc {
+    margin-block-end: 0;
+  }
+}
