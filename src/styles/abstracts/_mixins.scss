@@ -17,3 +17,9 @@
   white-space: nowrap;
   border-width: 0
 }
+
+// Hides scrollbar in FF and IE 10+
+@mixin reset_scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
