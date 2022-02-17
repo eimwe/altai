@@ -127,11 +127,15 @@
         <h2 class="level__title">Программа похода</h2>
       </div>
       <div class="gallery gallery--schedule">
-        <div class="gallery__controls">
-          <button class="gallery__control prev" type="button">Назад</button>
-          <button class="gallery__control next" type="button">Вперед</button>
+        <div class="gallery__controls flex-container">
+          <button class="gallery__control gallery__control--prev" type="button">
+            <span class="gallery__btn-name sr-only">Назад</span>
+          </button>
+          <button class="gallery__control gallery__control--next" type="button">
+            <span class="gallery__btn-name sr-only">Вперед</span>
+          </button>
         </div>
-        <div class="gallery__slides schedule__list">
+        <div class="gallery__slides grid-container schedule__list">
           <article class="gallery__slide gallery__slide--active schedule__item">
             <header class="flex-container">
               <h3 class="schedule__heading">День 1</h3>
@@ -268,14 +272,28 @@
           <span class="gallery__current">1</span>
           <span class="gallery__total">7</span>
         </div>
-        <ol class="gallery__pagination">
-          <li class="gallery__page gallery__page--active">1</li>
-          <li class="gallery__page">2</li>
-          <li class="gallery__page">3</li>
-          <li class="gallery__page">4</li>
-          <li class="gallery__page">5</li>
-          <li class="gallery__page">6</li>
-          <li class="gallery__page">7</li>
+        <ol class="gallery__pagination flex-container">
+          <li class="gallery__page gallery__page--active">
+            <span class="gallery__page-number sr-only">1</span>
+          </li>
+          <li class="gallery__page">
+            <span class="gallery__page-number sr-only">2</span>
+          </li>
+          <li class="gallery__page">
+            <span class="gallery__page-number sr-only">3</span>
+          </li>
+          <li class="gallery__page">
+            <span class="gallery__page-number sr-only">4</span>
+          </li>
+          <li class="gallery__page">
+            <span class="gallery__page-number sr-only">5</span>
+          </li>
+          <li class="gallery__page">
+            <span class="gallery__page-number sr-only">6</span>
+          </li>
+          <li class="gallery__page">
+            <span class="gallery__page-number sr-only">7</span>
+          </li>
         </ol>
       </div>
     </section>
@@ -314,12 +332,16 @@
         <h2 class="level__title">Наша команда</h2>
       </div>
       <div class="gallery gallery--team">
-        <div class="gallery__controls">
-          <button class="gallery__control prev" type="button">Назад</button>
-          <button class="gallery__control next" type="button">Вперед</button>
+        <div class="gallery__controls flex-container">
+          <button class="gallery__control gallery__control--prev" type="button">
+            <span class="gallery__btn-name sr-only">Назад</span>
+          </button>
+          <button class="gallery__control gallery__control--next" type="button">
+            <span class="gallery__btn-name sr-only">Вперед</span>
+          </button>
         </div>
-        <div class="gallery__slides team__mates">
-          <figure class="team__mate">
+        <div class="gallery__slides grid-container team__mates">
+          <figure class="gallery__slide team__mate">
             <img class="team__img" src="./images/galleries/team/wanderer.webp" alt="Фото Олега">
             <figcaption class="team__bio">
               <h3 class="team__name">Олег</h3>
@@ -329,7 +351,7 @@
               </cite>
             </figcaption>
           </figure>
-          <figure class="team__mate team__mate--active">
+          <figure class="gallery__slide gallery__slide--active team__mate">
             <img class="team__img" src="./images/galleries/team/storyteller.webp" alt="Фото Темира">
             <figcaption class="team__bio">
               <h3 class="team__name">Темир</h3>
@@ -339,7 +361,7 @@
               </cite>
             </figcaption>
           </figure>
-          <figure class="team__mate">
+          <figure class="gallery__slide team__mate">
             <img class="team__img" src="./images/galleries/team/guide.webp" alt="Фото Марины">
             <figcaption class="team__bio">
               <h3 class="team__name">Марина</h3>
@@ -349,7 +371,7 @@
               </cite>
             </figcaption>
           </figure>          
-          <figure class="team__mate">
+          <figure class="gallery__slide team__mate">
             <img class="team__img" src="./images/galleries/team/horsebreeder.webp" alt="Фото Поли">
             <figcaption class="team__bio">
               <h3 class="team__name">Поля</h3>
@@ -359,7 +381,7 @@
               </cite>
             </figcaption>
           </figure>
-          <figure class="team__mate">
+          <figure class="gallery__slide team__mate">
             <img class="team__img" src="./images/galleries/team/mascot.webp" alt="Фото Тупли">
             <figcaption class="team__bio">
               <h3 class="team__name">Тупля</h3>
@@ -367,12 +389,22 @@
             </figcaption>
           </figure>
         </div>
-        <ol class="gallery__pagination">
-          <li class="gallery__page">1</li>
-          <li class="gallery__page gallery__page--active">2</li>
-          <li class="gallery__page">3</li>
-          <li class="gallery__page">4</li>
-          <li class="gallery__page">5</li>
+        <ol class="gallery__pagination flex-container">
+          <li class="gallery__page">
+            <span class="gallery__page-number sr-only">1</span>
+          </li>
+          <li class="gallery__page gallery__page--active">
+            <span class="gallery__page-number sr-only">2</span>
+          </li>
+          <li class="gallery__page">
+            <span class="gallery__page-number sr-only">3</span>
+          </li>
+          <li class="gallery__page">
+            <span class="gallery__page-number sr-only">4</span>
+          </li>
+          <li class="gallery__page">
+            <span class="gallery__page-number sr-only">5</span>
+          </li>
         </ol>
       </div>
     </section>
@@ -383,38 +415,44 @@
       <blockquote class="level__desc level__desc--quote">
         <p>Всем нам иногда нужно стать кочевниками, хотя бы на пару дней.</p>
       </blockquote>
-      <div class="gallery gallery--photoreport grid-container">
-        <div class="gallery__controls">
-          <button class="gallery__control prev" type="button">Назад</button>
-          <button class="gallery__control next" type="button">Вперед</button>
+      <div class="gallery gallery--photoreport">
+        <div class="gallery__controls flex-container">
+          <button class="gallery__control gallery__control--prev" type="button">
+            <span class="gallery__btn-name sr-only">Назад</span>
+          </button>
+          <button class="gallery__control gallery__control--next" type="button">
+            <span class="gallery__btn-name sr-only">Вперед</span>
+          </button>
         </div>
-        <figure class="photoreport__snapshot">
-          <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-1.webp" alt="Лес">
-        </figure>
-        <figure class="photoreport__snapshot">
-          <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-2.webp" alt="Горы">
-        </figure>
-        <figure class="photoreport__snapshot">
-          <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-3.webp" alt="Единение с природой">
-        </figure>
-        <figure class="photoreport__snapshot">
-          <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-4.webp" alt="Поездка верхом на лошади">
-        </figure>
-        <figure class="photoreport__snapshot">
-          <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-5.webp" alt="Горный ручей">
-        </figure>
-        <figure class="photoreport__snapshot">
-          <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-6.webp" alt="Озеро">
-        </figure>
-        <figure class="photoreport__snapshot">
-          <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-7.webp" alt="Лошади">
-        </figure>
-        <figure class="photoreport__snapshot">
-          <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-8.webp" alt="Олень">
-        </figure>
-        <figure class="photoreport__snapshot">
-          <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-9.webp" alt="Чай с брусникой">
-        </figure>
+        <div class="gallery__slides grid-container photoreport__snapshots">
+          <figure class="gallery__slide photoreport__snapshot">
+            <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-1.webp" alt="Лес">
+          </figure>
+          <figure class="gallery__slide photoreport__snapshot">
+            <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-2.webp" alt="Горы">
+          </figure>
+          <figure class="gallery__slide photoreport__snapshot">
+            <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-3.webp" alt="Единение с природой">
+          </figure>
+          <figure class="gallery__slide photoreport__snapshot">
+            <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-4.webp" alt="Поездка верхом на лошади">
+          </figure>
+          <figure class="gallery__slide photoreport__snapshot">
+            <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-5.webp" alt="Горный ручей">
+          </figure>
+          <figure class="gallery__slide photoreport__snapshot">
+            <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-6.webp" alt="Озеро">
+          </figure>
+          <figure class="gallery__slide photoreport__snapshot">
+            <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-7.webp" alt="Лошади">
+          </figure>
+          <figure class="gallery__slide photoreport__snapshot">
+            <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-8.webp" alt="Олень">
+          </figure>
+          <figure class="gallery__slide photoreport__snapshot">
+            <img class="photoreport__img" src="./images/galleries/photoreport/snapshot-9.webp" alt="Чай с брусникой">
+          </figure>
+        </div>
       </div>
     </section>
     <section class="faq">
