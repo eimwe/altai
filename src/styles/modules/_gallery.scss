@@ -59,8 +59,7 @@
     background-color: var(--text-clr-body);
 
     &--active {
-      min-width: 20px;
-      min-height: 20px;
+      transform: scale(2);
     }
   }
 

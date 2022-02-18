@@ -1,0 +1,55 @@
+.schedule {
+  padding-block-start: 3.375em;
+  background-color: var(--bg-clr-section);
+
+  .level {
+    padding-inline: 2.75em;
+  }
+
+  .gallery__controls,
+  .gallery__counter {
+    display: none;
+  }
+
+  .gallery__pagination {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 124px);
+  }
+
+  &__item {
+    gap: 5.625em;
+  }
+
+  &__header {
+    justify-content: space-between;
+    margin-block-end: 1.875em;
+  }
+
+  &__desc {
+    padding-inline: 1em;
+  }
+
+  &__heading,
+  &__subheading {
+    margin: 0;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+  }
+
+  &__content {
+    margin-block: 1.25em;
+    color: var(--text-clr-white);
+
+    &:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  &__img {
+    align-self: end;
+    min-height: 266px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
