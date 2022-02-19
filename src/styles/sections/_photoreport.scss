@@ -1,0 +1,26 @@
+.photoreport {
+  padding-block-start: 2.9375em;
+
+  .level__title {
+    margin-block-end: .6115em;
+  }
+
+  .gallery--photoreport {
+    margin-block-start: 2.5em;
+  }
+
+  .gallery__controls {
+    top: calc(50% - 13px);
+    padding-inline: .75em;
+  }
+
+  &__snapshots {
+    margin: 0;
+  }
+
+  &__snapshot {
+    min-height: 400px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
