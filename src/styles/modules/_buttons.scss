@@ -10,4 +10,13 @@
     color: var(--text-clr-body);
     background-color: var(--text-clr-dark);
   }
+
+  &--confirm {
+    padding-block: .8em;
+    padding-inline: 1.5em;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--text-clr-dark);
+    background-color: var(--text-clr-body);
+  }
 }
