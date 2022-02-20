@@ -1,0 +1,25 @@
+.form {
+  flex-direction: column;
+  gap: 1.5em;
+
+  &__phone {
+    width: 100%;
+    padding-block: .85em;
+    padding-inline: .75em;
+    border: 1px solid currentColor;
+    font-size: var(--fs-sm);
+    font-weight: 300;
+    color: var(--text-clr-body);
+    background-color: transparent;
+  }
+
+  &__submit {
+    width: 100%;
+    padding-block: .44em;
+    font-size: var(--fs-xl);
+  }
+
+  &--callback {
+    margin-block-start: 2.25em;
+  }
+}
