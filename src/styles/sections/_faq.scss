@@ -1,0 +1,66 @@
+.faq {
+  padding-block-start: 3.75em;
+  padding-block-end: 4.75em;
+
+  .level {
+    padding-inline: 5.25em;
+  }
+
+  &__item {
+    border-bottom: 1px solid currentColor;
+
+    &[open] {
+      & > summary::after {
+        content: '';
+        display: block;
+        min-width: 30px;
+        min-height: 1px;
+        background-color: var(--text-clr-body);
+      }
+    }
+
+    &:first-of-type {
+      border-top: 1px solid currentColor;
+    }
+  }
+
+  &__question {
+    padding-left: .9375em;
+    padding-right: 1.5em;
+    justify-content: space-between;
+
+    &::after {
+      content: '';
+      display: block;
+      min-width: 30px;
+      min-height: 30px;
+      background-image: url('../images/shapes/crosshairs.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::marker,
+    &::-moz-list-bullet,
+    &::-webkit-details-marker {
+      display: none;
+      list-style-type: none;
+      list-style-image: none;
+    }
+  }
+
+  &__title {
+    margin-block: 1.75em;
+    margin-inline-start: 1.25em;
+  }
+
+  &__answer {
+    margin-block-start: 0;
+    margin-block-end: 2.25em;
+    padding-left: .9375em;
+    padding-right: 1.5em;
+
+    &--u-list {
+      padding-left: 2em;
+    }
+  }
+}
