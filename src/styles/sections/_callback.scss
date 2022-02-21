@@ -1,0 +1,13 @@
+.callback {
+  min-height: 620px;
+  padding-block-start: 3.125em;
+  background-color: var(--bg-clr-section);
+  background-image: url('../images/backgrounds/callback-bg.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 60%;
+
+  .level__desc {
+    color: var(--text-clr-body);
+  }
+}
