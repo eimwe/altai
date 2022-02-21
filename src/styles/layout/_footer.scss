@@ -1,0 +1,14 @@
+.copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-block: 2.875em;
+  text-align: center;
+
+  &__text {
+    margin: 0;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: var(--tracking-h2);
+  }
+}
