@@ -69,6 +69,8 @@ snapshotPrev.addEventListener('click', () => snapshotSlider.prev());
  */
 let scheduleGallery = document.querySelector('.schedule__list'),
     schedulePages = document.querySelector('.gallery--schedule .gallery__pagination'),
+    scheduleCountCurrent = document.querySelector('.gallery--schedule .gallery__current'),
+    scheduleCountTotal = document.querySelector('.gallery--schedule .gallery__total'),
     scheduleNext = document.querySelector('.gallery--schedule .gallery__control--next'),
     schedulePrev = document.querySelector('.gallery--schedule .gallery__control--prev');
 
@@ -93,7 +95,8 @@ const scheduleSlider = new OwlCarousel(
         5000,
         'gallery__slide--active',
         schedulePages,
-        'gallery__page--active');
+        'gallery__page--active',
+        scheduleCountCurrent);
 
 /**
  * Show next schedule gallery slide
@@ -112,3 +115,12 @@ schedulePrev.addEventListener('click', () => scheduleSlider.prev());
  * Enables page navigation
  */
 scheduleSlider.navigatePage();
+
+/**
+ * Inserts total amount of slides
+ */
+scheduleSlider.countTotal(scheduleCountTotal);
+/**
+ * Inserts starting slide number
+ */
+scheduleSlider.countPages(scheduleCountCurrent);

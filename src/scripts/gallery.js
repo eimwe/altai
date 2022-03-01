@@ -61,6 +61,8 @@ class Gallery {
       left: coord,
       behavior: 'smooth'
     });
+
+    return this.activeIndex;
   }
 }
 
@@ -78,18 +80,21 @@ class OwlCarousel extends Gallery {
    * @param {String} activeSlideClass - the active slide class name
    * @param {HTMLCollection} pages - a collection of HTML pagination nodes
    * @param {String} activePageClass - the active page class name
+   * @param {HTMLElement} counterCurrent - current count number node
    */
-  constructor(gallery, delay, activeSlideClass, pages, activePageClass) {
+  constructor(gallery, delay, activeSlideClass, pages, activePageClass, counterCurrent) {
     super(gallery, delay);
     this.activeSlideClass = activeSlideClass;
     this.slides = Array.from(this.gallery.children);
     this.pages = Array.from(pages.children);
     this.activePageClass = activePageClass;
+    this.counterCurrent = counterCurrent;
   }
 
   /**
    * @method prev
-   * @description decreases activeIndex prop and toggles between pages and slides
+   * @description decreases activeIndex prop and toggles between pages and slides,
+   * refreshes current slide number in the counter
    * @see {@link toggleActive}
    * @param {undefined}
    * @returns {undefined}
@@ -98,11 +103,13 @@ class OwlCarousel extends Gallery {
     super.prev();
     this.toggleActive(this.slides, this.activeSlideClass);
     this.toggleActive(this.pages, this.activePageClass);
+    this.countPages(this.counterCurrent);
   }
 
   /**
    * @method next
-   * @description increases activeIndex prop and toggles between pages and slides
+   * @description increases activeIndex prop and toggles between pages and slides,
+   * refreshes current slide number in the counter
    * @see {@link toggleActive}
    * @param {undefined}
    * @returns {undefined}
@@ -111,6 +118,7 @@ class OwlCarousel extends Gallery {
     super.next();
     this.toggleActive(this.slides, this.activeSlideClass);
     this.toggleActive(this.pages, this.activePageClass);
+    this.countPages(this.counterCurrent);
   }
 
   /**
@@ -132,7 +140,8 @@ class OwlCarousel extends Gallery {
 
   /**
    * @method navigatePage
-   * @description shows slide according to the clicked page
+   * @description shows slide according to the clicked page,
+   * refreshes current slide number in the counter
    * @param {undefined}
    * @returns {undefined}
    */
@@ -144,8 +153,29 @@ class OwlCarousel extends Gallery {
         super.showSlide();
         this.toggleActive(this.slides, this.activeSlideClass);
         this.toggleActive(this.pages, this.activePageClass);
+        this.countPages(this.counterCurrent);
       });
     });
+  }
+
+  /**
+   * @method countPages
+   * @description calculates current slide number
+   * @param {HTMLElement} currentSlideNode - current count number node
+   * @returns {undefined}
+   */
+  countPages(currentSlideNode) {
+    currentSlideNode.textContent = parseInt(super.showSlide()) + 1;
+  }
+
+  /**
+   * @method countTotal
+   * @description calculates and inserts the total number of slides
+   * @param {HTMLElement} totalSlideNode - total slide number node
+   * @returns {undefined}
+   */
+  countTotal(totalSlideNode) {
+    totalSlideNode.textContent = this.numItems;
   }
 }
 
