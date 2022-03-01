@@ -129,6 +129,24 @@ class OwlCarousel extends Gallery {
       }
     });
   }
+
+  /**
+   * @method navigatePage
+   * @description shows slide according to the clicked page
+   * @param {undefined}
+   * @returns {undefined}
+   */
+   navigatePage() {
+    this.pages.forEach(page => {
+      page.addEventListener('click', event => {
+        this.activeIndex = event.target.dataset.id;
+
+        super.showSlide();
+        this.toggleActive(this.slides, this.activeSlideClass);
+        this.toggleActive(this.pages, this.activePageClass);
+      });
+    });
+  }
 }
 
 export {Gallery, OwlCarousel};

@@ -107,3 +107,8 @@ scheduleNext.addEventListener('click', () => scheduleSlider.next());
  * @fires prev
  */
 schedulePrev.addEventListener('click', () => scheduleSlider.prev());
+
+/**
+ * Enables page navigation
+ */
+scheduleSlider.navigatePage();
