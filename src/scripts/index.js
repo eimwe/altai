@@ -125,3 +125,55 @@ scheduleSlider.countTotal(scheduleCountTotal);
  * Inserts starting slide number
  */
 scheduleSlider.countPages(scheduleCountCurrent);
+
+/**
+ * Variables for a team gallery
+ * @member {HTMLElement}
+ */
+ let teamGallery = document.querySelector('.team__mates'),
+     teamPages = document.querySelector('.gallery--team .gallery__pagination'),
+     teamNext = document.querySelector('.gallery--team .gallery__control--next'),
+     teamPrev = document.querySelector('.gallery--team .gallery__control--prev');
+
+/**
+ * Enumerated team gallery slides
+ */
+ indexGalleries(teamGallery);
+
+ /**
+  * Enumerated team gallery pages
+  */
+ indexGalleries(teamPages);
+
+ /**
+ * @constant
+ * @default
+ * @memberof OwlCarousel
+ * @instance
+ */
+const teamSlider = new OwlCarousel(
+  teamGallery,
+  5000,
+  teamGallery.children[0].offsetWidth,
+  'gallery__slide--active',
+  teamPages,
+  'gallery__page--active',
+  );
+
+/**
+ * Show next team gallery slide
+ * @listens click
+ * @fires next
+ */
+ teamNext.addEventListener('click', () => teamSlider.next());
+/**
+ * Show next team gallery slide
+ * @listens click
+ * @fires prev
+ */
+ teamPrev.addEventListener('click', () => teamSlider.prev());
+ 
+/**
+ * Enables team gallery page navigation
+ */
+ teamSlider.navigatePage();
