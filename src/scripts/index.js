@@ -93,6 +93,7 @@ indexGalleries(schedulePages);
 const scheduleSlider = new OwlCarousel(
         scheduleGallery,
         5000,
+        false,
         'gallery__slide--active',
         schedulePages,
         'gallery__page--active',
