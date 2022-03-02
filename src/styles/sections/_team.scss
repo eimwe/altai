@@ -11,7 +11,7 @@
     align-self: center;
 
     .team__img {
-      max-height: 420px;
+      clip-path: inset(0 0);
     }
 
     .team__bio {
@@ -24,8 +24,8 @@
     align-items: center;
     gap: 1em;
     margin-block-end: 1.5em;
-    padding-inline: 1em;
-    scroll-padding-inline: 1em;
+    padding-inline: 2.8em;
+    scroll-padding-inline: 2.8em;
   }
 
   &__mate {
@@ -35,9 +35,11 @@
 
   &__img {
     min-width: 280px;
-    max-height: 350px;
+    max-height: 420px;
     aspect-ratio: 1 / 2;
     object-fit: cover;
+    clip-path: inset(35px 0);
+    transition: clip-path var(--delay);
   }
 
   &__bio {
@@ -45,6 +47,7 @@
     margin-block-start: 1.5em;
     text-align: center;
     opacity: 0;
+    transition: opacity var(--delay);
   }
 
   &__name {
