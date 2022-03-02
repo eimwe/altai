@@ -88,6 +88,7 @@ class OwlCarousel extends Gallery {
     this.slides = Array.from(this.gallery.children);
     this.pages = Array.from(pages.children);
     this.activePageClass = activePageClass;
+    if(!counterCurrent) return;
     this.counterCurrent = counterCurrent;
   }
 
@@ -103,6 +104,7 @@ class OwlCarousel extends Gallery {
     super.prev();
     this.toggleActive(this.slides, this.activeSlideClass);
     this.toggleActive(this.pages, this.activePageClass);
+    if(!this.counterCurrent) return;
     this.countPages(this.counterCurrent);
   }
 
@@ -118,6 +120,7 @@ class OwlCarousel extends Gallery {
     super.next();
     this.toggleActive(this.slides, this.activeSlideClass);
     this.toggleActive(this.pages, this.activePageClass);
+    if(!this.counterCurrent) return;
     this.countPages(this.counterCurrent);
   }
 
@@ -153,6 +156,7 @@ class OwlCarousel extends Gallery {
         super.showSlide();
         this.toggleActive(this.slides, this.activeSlideClass);
         this.toggleActive(this.pages, this.activePageClass);
+        if(!this.counterCurrent) return;
         this.countPages(this.counterCurrent);
       });
     });
