@@ -475,14 +475,14 @@
           </p>
         </div>
         <form class="form form--callback flex-container" action="#" method="post" id="callback-form">
-          <input class="form__phone" type="tel" name="phoneNumber"
+          <input class="form__control form__control--phone" type="tel" id="phone-number" name="phoneNumber"
           value="+7"
-          placeholder="+7(999)-999-99-99"
-          pattern="[+]{1}[0-9]{1}[(]{1}[0-9]{3}[)]{1}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-          oninvalid="this.setCustomValidity('Введите свой номер телефона в формате +7(xxx)-xxx-xx-xx')"
-          title="Введите свой номер телефона в формате +7(xxx)-xxx-xx-xx"
+          maxlength="17"
+          placeholder="+7"
+          pattern="[+]{1}[0-9]{1}[(]{1}[0-9]{3}[)]{1}[-]{1}[0-9]{3}[-]{1}[0-9]{2}[-]{1}[0-9]{2}"
+          title="Введите только цифры, без указания кода страны"
           required>
-          <input class="btn btn--confirm form__submit" type="submit" value="Хочу в поход!">
+          <input class="btn btn--confirm form__control form__control--submit" type="submit" value="Хочу в поход!">
         </form>
       </div>
     </section>

@@ -3,6 +3,7 @@
   font-weight: 600;
   line-height: 1.125;
   cursor: pointer;
+  transition: background-color var(--delay);
 
   &--action {
     display: block;
@@ -18,5 +19,13 @@
     font-weight: 700;
     color: var(--text-clr-dark);
     background-color: var(--text-clr-body);
+
+    &:focus {
+      background-color: var(--text-clr-white);
+    }
+  
+    &:active {
+      background-color: var(--confirm-active);
+    }
   }
 }
