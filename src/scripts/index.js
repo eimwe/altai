@@ -1,5 +1,6 @@
 import '../styles/style.scss';
 import { Gallery, OwlCarousel } from './gallery.js';
+import FormValidator from './form.js';
 
 /**
  * @function indexGalleries
@@ -177,3 +178,28 @@ const teamSlider = new OwlCarousel(
  * Enables team gallery page navigation
  */
  teamSlider.navigatePage();
+
+/**
+ * @constant
+ * @default
+ * @member {HTMLElement}
+ */
+const FORM = document.getElementById('callback-form');
+/**
+ * @constant
+ * @default
+ * @type {Array.<string>}
+ */
+const FIELDS = ['phone-number'];
+
+/**
+ * @constant
+ * @default
+ * @memberof FormValidator
+ * @instance
+ */
+const entryValidator = new FormValidator(FORM, FIELDS, '+7');
+/**
+ * Initializes form validation
+ */
+entryValidator.initialize();
