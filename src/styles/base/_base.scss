@@ -48,3 +48,7 @@ dl,
 dd {
   margin: 0;
 }
+
+::backdrop {
+  --bg-backdrop: rgba(100, 100, 100, 0.5);
+}

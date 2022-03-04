@@ -1,0 +1,43 @@
+@use '../abstracts/mixins';
+
+.modal {
+  padding-inline: 1em;
+  padding-block: .75em;
+  border: none;
+  color: var(--text-clr-body);
+  background-color: var(--bg-modal);
+
+  .level {
+    margin-block-start: 4em;
+    margin-block-end: 2em;
+
+    &__title {
+      margin-block-end: 1.5em;
+    }
+
+    &__desc {
+      padding-inline: 2em;
+    }
+  }
+
+  &__btn-name {
+    @include mixins.sr_only;
+  }
+
+  .btn--dismiss {
+    margin-left: auto;
+  }
+
+  &--confirm {
+    min-height: 600px;
+  
+    .btn--confirm {
+      padding-inline: 3.375em;
+      padding-block: 1em;
+    }
+  }
+
+  &::backdrop {
+    background: var(--bg-backdrop);
+  }
+}

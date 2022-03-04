@@ -1,4 +1,5 @@
 .btn {
+  display: block;
   font-size: var(--fs-xs);
   font-weight: 600;
   line-height: 1.125;
@@ -6,7 +7,6 @@
   transition: background-color var(--delay);
 
   &--action {
-    display: block;
     padding: .625em 2em;
     color: var(--text-clr-body);
     background-color: var(--text-clr-dark);
@@ -15,10 +15,12 @@
   &--confirm {
     padding-block: .8em;
     padding-inline: 1.5em;
+    margin-inline: auto;
     font-size: var(--fs-sm);
     font-weight: 700;
     color: var(--text-clr-dark);
     background-color: var(--text-clr-body);
+    outline: none;
 
     &:focus {
       background-color: var(--text-clr-white);
@@ -27,5 +29,15 @@
     &:active {
       background-color: var(--confirm-active);
     }
+  }
+
+  &--dismiss {
+    min-width: 48px;
+    min-height: 48px;
+    background-color: transparent;
+    background-image: url('../images/shapes/crosshairs.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(45deg);
   }
 }
