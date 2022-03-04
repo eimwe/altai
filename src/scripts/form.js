@@ -1,4 +1,43 @@
 /**
+ * Polyfill for HTML <dialog> element
+ * @constant
+ * @default
+ */
+const dialogPolyfill = require('./dialog-polyfill');
+
+/**
+ * @constant
+ * @default
+ * @member {HTMLElement}
+ */
+const confirmModal = document.querySelector('.modal--confirm');
+
+/**
+ * Register modal node with polyfill
+ * @constant
+ * @default
+ * @memberof dialogPolyfill
+ * @instance
+ */
+dialogPolyfill.registerDialog(confirmModal);
+
+/**
+ * Variable containing array of modal buttons
+ * @type {Array.<HTMLElement>}
+ */
+let cancelButtons = document.querySelectorAll('.modal--confirm .btn');
+
+/**
+ * Close modal on click at any button from the array
+ * @listens click
+ * @fires confirmModal.close
+ * @see {@link confirmModal.close}
+ */
+cancelButtons.forEach(button => {
+  button.addEventListener('click', () => confirmModal.close());
+});
+
+/**
  * @namespace FormValidator
  * Class representing a form validator.
  */
@@ -48,6 +87,14 @@ export default class FormValidator {
           return false;
         } else {
           INPUT.value = '';
+
+          /**
+           * @method validateOnEntry
+           * @description native method for closing modals wrapped in the polyfill
+           * @param {undefined}
+           * @returns {Void}
+           */
+          confirmModal.showModal();
         }
       })
     })
