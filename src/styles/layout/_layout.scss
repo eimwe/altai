@@ -8,5 +8,12 @@
 }
 
 .wrapper {
+  max-width: 1440px;
   padding-inline: 1.8em;
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    padding-inline: 6em;
+  }
 }

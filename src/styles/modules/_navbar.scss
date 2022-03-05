@@ -28,3 +28,13 @@
     opacity: 1;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 70px;
+
+    &--opened {
+      right: 120px;
+    }
+  }
+}
