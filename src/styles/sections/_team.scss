@@ -68,3 +68,21 @@
     color: var(--text-clr-white);
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .team {
+    
+    &__mates {
+      grid-auto-columns: 600px;
+    }
+
+    &__img {
+      min-width: 600px;
+      max-height: 535px;
+    }
+
+    &__bio {
+      padding-inline: 4em;
+    }
+  }
+}
