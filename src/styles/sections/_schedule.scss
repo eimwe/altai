@@ -53,3 +53,16 @@
     object-fit: cover;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .schedule {
+
+    .gallery__pagination {
+      top: 35%;
+    }
+
+    &__desc {
+      padding-inline: 3em;
+    }
+  }
+}
