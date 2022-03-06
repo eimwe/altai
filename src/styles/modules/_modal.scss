@@ -41,3 +41,19 @@
     background: var(--bg-backdrop);
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .modal {
+    padding-inline: 4em;
+    padding-block: 2.875em;
+
+    .level {
+      margin-block-start: 5em;
+      margin-block-end: 2.625em;
+  
+      &__desc {
+        padding-inline: 4.4em;
+      }
+    }
+  }
+}

@@ -64,3 +64,22 @@
     }
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .faq {
+    
+    &__question {
+      padding-left: 2.5em;
+      padding-right: 4.62em;
+    }
+
+    &__answer {
+      padding-left: 2.5em;
+      padding-right: 13.75em;
+
+      &--u-list {
+        padding-left: 3.5em;
+      }
+    }
+  }
+}
