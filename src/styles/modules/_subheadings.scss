@@ -20,3 +20,20 @@
     }
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .level {
+
+    &__desc {
+
+      &--quote {
+        max-width: 75%;
+        padding-left: 4.75em;
+        padding-right: 1em;
+        margin-left: auto;
+        font-size: var(--fs-md);
+        font-style: italic;
+      }
+    }
+  }
+}
