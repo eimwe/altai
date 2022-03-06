@@ -52,17 +52,59 @@ let snapshotGallery = document.querySelector('.photoreport__snapshots'),
 const snapshotSlider = new Gallery(snapshotGallery, 9000);
 
 /**
+ * Variable containing method to show next snapshotGallery slide
+ * this method was saved to be able to refer to it while adding/removing listeners
+ * @memberof Gallery
+ */
+let nextSnapshot = () => snapshotSlider.next();
+/**
  * Show next slide
  * @listens click
  * @fires next
  */
-snapshotNext.addEventListener('click', () => snapshotSlider.next());
+snapshotNext.addEventListener('click', nextSnapshot);
+
+/**
+ * Variable containing method to show previous snapshotGallery slide
+ * this method was saved to be able to refer to it while adding/removing listeners
+ * @memberof Gallery
+ */
+let prevSnapshot = () => snapshotSlider.prev();
 /**
  * Show previous slide
  * @listens click
  * @fires prev
  */
-snapshotPrev.addEventListener('click', () => snapshotSlider.prev());
+snapshotPrev.addEventListener('click', prevSnapshot);
+
+/**
+ * @function stopSnapshotGallery
+ * @description erases timeout id and removes event listeners in snapshotGallery
+ * if MediaQueryListEvent.matches === true
+ * @param {Object} event - MediaQueryListEvent
+ * @returns {undefined}
+ */
+const stopSnapshotGallery = (event) => {
+  if (event.matches) {
+    clearTimeout(snapshotSlider.interval);
+    snapshotNext.removeEventListener('click', nextSnapshot);
+    snapshotPrev.removeEventListener('click', prevSnapshot);
+  }
+}
+
+/**
+ * Media query to control snapshotGallery
+ * @constant
+ * @default
+ */
+const mediumMedia = window.matchMedia('(min-width: 600px)');
+/**
+ * Listens to the changing of the viewport min-width
+ * @listens change
+ * @fires stopSnapshotGallery
+ * @see {@link stopSnapshotGallery}
+ */
+mediumMedia.addEventListener('change', stopSnapshotGallery);
 
 /**
  * Variables for a schedule gallery
