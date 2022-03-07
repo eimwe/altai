@@ -40,3 +40,12 @@
     }
   }
 }
+
+@media only screen and (min-width: 900px) {
+  .photoreport {
+
+    &__snapshots {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+}

@@ -64,3 +64,21 @@
     color: var(--text-clr-white);
   }
 }
+
+@media only screen and (min-width: 900px) {
+  .about {
+
+    .level__desc {
+      padding-inline: 12.4em;
+    }
+
+    &__items {
+      grid-auto-flow: column;
+      place-items: baseline;
+    }
+
+    &__item {
+      padding: 0;
+    }
+  }
+}

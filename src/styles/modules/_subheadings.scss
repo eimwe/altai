@@ -37,3 +37,15 @@
     }
   }
 }
+
+@media only screen and (min-width: 900px) {
+  .level {
+
+    &__desc {
+
+      &--quote {
+        padding-left: 12.75em;
+      }
+    }
+  }
+}

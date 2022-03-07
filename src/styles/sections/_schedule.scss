@@ -66,3 +66,34 @@
     }
   }
 }
+
+@media only screen and (min-width: 900px) {
+  .schedule {
+    padding-block-end: 6em;
+
+    .gallery__pagination {
+      position: static;
+    }
+
+    .gallery__controls {
+      display: flex;
+      top: calc(50% - 64px);
+      padding-inline: .75em;
+    }
+
+    &__list {
+      margin-inline: 6.25em;
+      margin-top: 5.625em;
+      margin-bottom: 6.125em;
+    }
+
+    &__item {
+      grid-auto-flow: column;
+      gap: 4.25em;
+    }
+
+    &__desc {
+      padding-inline: 0;
+    }
+  }
+}
