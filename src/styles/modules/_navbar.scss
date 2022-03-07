@@ -23,6 +23,18 @@
     background-color: var(--text-clr-body);
   }
 
+  &__item {
+
+    &:not(.navbar__item--btn) {
+      font-family: 'Open Sans';
+      font-weight: 400;
+    }
+
+    &--faq {
+      text-transform: uppercase;
+    }
+  }
+
   &--opened {
     right: 48px;
     opacity: 1;
@@ -35,6 +47,26 @@
 
     &--opened {
       right: 120px;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .navbar {
+    flex-grow: 1;
+    position: static;
+    opacity: 1;
+    box-shadow: none;
+
+    &__container {
+      flex-direction: row;
+      gap: 1.875em;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    &__item--btn {
+      margin-left: auto;
     }
   }
 }

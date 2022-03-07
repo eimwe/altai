@@ -31,7 +31,7 @@
       height: 2.5px;
       border-radius: 8px;
       background-color: var(--bg-hamburger);
-      transition: all var(--delay) cubic-bezier(1, 0, 0, 1);
+      transition: transform var(--delay) cubic-bezier(1, 0, 0, 1);
     }
 
     &::before {
@@ -56,7 +56,8 @@
   display: none;
   
   ~ label {
-    transition: all var(--delay-hamburger) cubic-bezier(1, 0, 0, 1);
+    transition: background-color var(--delay-hamburger) cubic-bezier(1, 0, 0, 1),
+                transform var(--delay-hamburger) cubic-bezier(1, 0, 0, 1);
   }
 
   &:checked ~ label {
@@ -71,5 +72,11 @@
   &:checked ~ label::after {
     width: 21px;
     transform: rotateZ(-45deg);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .menu-btn {
+    display: none;
   }
 }
