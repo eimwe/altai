@@ -62,3 +62,32 @@
     }
   }
 }
+
+@media only screen and (min-width: 900px) {
+  .details {
+    padding-block-end: 2.375em;
+
+    .level__desc {
+      padding-inline: 8em;
+    }
+
+    &__container {
+      display: flex;
+      gap: 4.125em;
+      justify-content: center;
+    }
+
+    &__list {
+      height: min-content;
+      align-self: center;
+      flex-basis: 480px;
+      gap: 3em 6em;
+      margin: 0;
+    }
+
+    &__destination {
+      padding: 0;
+      transform: translate(0, -20px);
+    }
+  }
+}

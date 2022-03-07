@@ -84,3 +84,18 @@
     background-position-y: 25%, 0;
   }
 }
+
+@media only screen and (min-width: 900px) {
+  .banner {
+    background-position-y: -20%, 0;
+
+    &__subheading,
+    &__redirector {
+      display: none;
+    }
+
+    &__subtitle {
+      transform: translate(-12px, -55px);
+    }
+  }
+}
