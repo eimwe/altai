@@ -73,16 +73,67 @@
   .team {
     
     &__mates {
-      grid-auto-columns: 600px;
+      grid-auto-columns: 360px;
     }
 
     &__img {
-      min-width: 600px;
+      min-width: 360px;
       max-height: 535px;
     }
 
     &__bio {
-      padding-inline: 4em;
+      padding-inline: 2em;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .team {
+    padding-block-start: 4.8125em;
+    
+    &__mates {
+      max-width: 1020px;
+      grid-auto-columns: 420px;
+      margin-inline: auto;
+      gap: 0;
+    }
+
+    &__mate {
+      max-width: 420px;
+    }
+
+    &__img {
+      min-width: 420px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .team {
+
+    .level__title {
+      margin-bottom: 1.4375em;
+    }
+
+    .gallery__controls {
+      display: flex;
+      top: calc(50% - 100px);
+      padding-inline: .75em;
+    }
+
+    .gallery__pagination {
+      display: none;
+    }
+
+    &__mates {
+      max-width: 1200px;
+    }
+
+    &__bio {
+      min-height: 152px;
+      padding-left: 4em;
+      padding-right: 1em;
+      text-align: left;
     }
   }
 }
