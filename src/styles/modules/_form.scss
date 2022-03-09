@@ -44,3 +44,28 @@
     margin-block-start: 2.25em;
   }
 }
+
+@media only screen and (min-width: 900px) {
+  .form {
+    flex-direction: row;
+    gap: 1.125em;
+
+    &__control {
+
+      &--phone {
+        padding: .75em 1em;
+      }
+
+      &--submit {
+        width: fit-content;
+        padding: .838em 1.5em;
+        font-size: var(--fs-sm);
+      }
+    }
+
+    &--callback {
+      padding-inline: 4.85em;
+      margin-block-start: 5.25em;
+    }
+  }
+}
