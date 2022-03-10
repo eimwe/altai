@@ -98,3 +98,32 @@
     }
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .schedule {
+
+    .gallery--schedule {
+      margin-inline: 9.5em;
+    }
+
+    .gallery__controls {
+      padding-inline: 0;
+    }
+
+    .gallery__counter {
+      display: block;
+      position: absolute;
+      bottom: 26%;
+      right: 52.5%;
+    }
+
+    &__list {
+      margin-inline: 5.75em;
+    }
+
+    &__img {
+      min-height: 336px;
+      max-width: 472px;
+    }
+  }
+}

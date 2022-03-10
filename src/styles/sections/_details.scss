@@ -92,3 +92,28 @@
     }
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .details {
+    padding-block-end: 0;
+
+    .level__desc {
+      padding-inline: 18em;
+    }
+
+    &__container {
+      justify-content: end;
+    }
+
+    &__list {
+      flex-basis: auto;
+      align-self: start;
+      column-gap: 9em;
+      margin-top: 2.5em;
+    }
+
+    &__destination {
+      transform: translateY(-80px);
+    }
+  }
+}

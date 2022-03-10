@@ -117,8 +117,9 @@
 
     .gallery__controls {
       display: flex;
+      min-width: 1280px;
       top: calc(50% - 100px);
-      padding-inline: .75em;
+      left: 9.5%;
     }
 
     .gallery__pagination {
