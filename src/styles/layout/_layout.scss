@@ -8,7 +8,7 @@
 }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 1240px;
   padding-inline: 1.8em;
   margin-inline: auto;
 }
@@ -16,5 +16,11 @@
 @media only screen and (min-width: 600px) {
   .wrapper {
     padding-inline: 6em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    padding-inline: 0;
   }
 }

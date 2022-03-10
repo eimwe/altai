@@ -99,3 +99,23 @@
     }
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .banner {
+    background-image: url('../images/shapes/path-desktop.svg'),
+                      url('../images/backgrounds/banner-bg.webp');
+    background-position-x: 0, 40%;
+    background-position-y: 26%, 0;
+
+    &__heading {
+      flex-direction: row;
+    }
+
+    &__subtitle {
+      writing-mode: vertical-rl;
+      align-self: center;
+      line-height: 0;
+      transform: scale(-1, -1);
+    }
+  }
+}
