@@ -49,3 +49,16 @@
     }
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .level {
+
+    &__desc {
+
+      &--quote {
+        padding-left: 21em;
+        padding-right: 9em;
+      }
+    }
+  }
+}

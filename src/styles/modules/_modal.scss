@@ -69,3 +69,22 @@
     }
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .modal {
+    padding-inline: 6em;
+    padding-block: 6em;
+  
+    .level {
+      margin-block-start: 4.17em;
+  
+      &__desc {
+        padding-inline: 22em;
+      }
+    }
+
+    &--confirm {
+      min-height: 720px;
+    }
+  }
+}

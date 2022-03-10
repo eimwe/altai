@@ -21,3 +21,17 @@
     }
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .callback {
+    background-position-y: 50%;
+
+    .level__title {
+      margin-block-end: 1.335em;
+    }
+
+    .level__desc {
+      padding-inline: 16em;
+    }
+  }
+}

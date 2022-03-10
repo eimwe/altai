@@ -51,3 +51,21 @@
     }
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .photoreport {
+
+    .level__title {
+      margin-block-end: 2.125em;
+    }
+
+    .gallery--photoreport {
+      margin-block-start: 4.25em;
+    }
+
+    &__snapshots {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      padding-inline: 9.264em;
+    }
+  }
+}

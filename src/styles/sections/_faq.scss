@@ -90,3 +90,21 @@
     padding-block-end: 8em;
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .faq {
+    padding-inline: 9.264em;
+
+    .level {
+      margin-block-end: 5em;
+    }
+
+    &__question {
+      padding-right: 7.25em;
+    }
+
+    &__answer {
+      padding-right: 21em;
+    }
+  }
+}
