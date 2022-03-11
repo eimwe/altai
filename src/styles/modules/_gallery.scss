@@ -36,9 +36,21 @@
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
+    outline: none;
+    transition: filter var(--delay), opacity var(--delay);
 
     &--prev {
       transform: rotate(180deg);
+    }
+
+    &:focus,
+    &:hover {
+      filter: drop-shadow(0 0 1px var(--text-clr-body));
+    }
+  
+    &:active {
+      opacity: .3;
+      filter: none;
     }
   }
 

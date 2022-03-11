@@ -10,6 +10,18 @@
     padding: .625em 2em;
     color: var(--text-clr-body);
     background-color: var(--text-clr-dark);
+    outline: none;
+
+    &:focus,
+    &:hover {
+      color: var(--text-clr-body);
+      background-color: var(--action-focus);
+    }
+  
+    &:active {
+      color: var(--text-clr-body);
+      background-color: var(--action-active);
+    }
   }
 
   &--confirm {
@@ -22,7 +34,8 @@
     background-color: var(--text-clr-body);
     outline: none;
 
-    &:focus {
+    &:focus,
+    &:hover {
       background-color: var(--text-clr-white);
     }
   
@@ -39,5 +52,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     transform: rotate(45deg);
+    outline: none;
+    transition: filter var(--delay), opacity var(--delay);
+
+    &:focus,
+    &:hover {
+      filter: drop-shadow(0 0 1px var(--text-clr-body));
+    }
+  
+    &:active {
+      opacity: .5;
+      filter: none;
+    }
   }
 }

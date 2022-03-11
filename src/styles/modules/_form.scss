@@ -5,7 +5,9 @@
   &__control {
     width: 100%;
     outline: none;
-    transition: font-weight var(--delay), box-shadow var(--delay);
+    transition: font-weight var(--delay),
+                box-shadow var(--delay),
+                background-color var(--delay);
 
     &--phone {
       padding-block: .85em;

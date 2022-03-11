@@ -8,6 +8,7 @@
 
   &__item {
     border-bottom: 1px solid currentColor;
+    transition: transform var(--delay);
 
     &[open] {
       & > summary::after {
@@ -28,6 +29,7 @@
     padding-left: .9375em;
     padding-right: 1.5em;
     justify-content: space-between;
+    cursor: pointer;
 
     &::after {
       content: '';
@@ -37,6 +39,23 @@
       background-image: url('../images/shapes/crosshairs.svg');
       background-repeat: no-repeat;
       background-size: contain;
+      transition: filter var(--delay), opacity var(--delay);
+    }
+
+    &:focus,
+    &:hover {
+
+      &::after {
+        filter: drop-shadow(0 0 1px var(--text-clr-body));
+      }
+    }
+  
+    &:active {
+
+      &::after {
+        opacity: .5;
+        filter: none;
+      }
     }
 
     &::marker,
