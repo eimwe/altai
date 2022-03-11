@@ -78,4 +78,13 @@
       }
     }
   }
+
+  @supports (-moz-appearance:none) {
+    .photoreport {
+
+      &__snapshot {
+        height: 400px;
+      }
+    }
+  }
 }

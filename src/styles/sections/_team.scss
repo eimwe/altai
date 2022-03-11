@@ -67,6 +67,15 @@
     font-style: normal;
     color: var(--text-clr-white);
   }
+
+  @supports (-moz-appearance:none) {
+    .team {
+
+      &__img {
+        height: 420px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -84,6 +93,35 @@
     &__bio {
       padding-inline: 2em;
     }
+  }
+
+  @supports (-moz-appearance:none) {
+    .team {
+
+      .gallery__pagination {
+        display: flex;
+      }
+
+      .gallery__controls {
+        display: none;
+      }
+      
+      &__mates {
+        max-width: 100%;
+        grid-auto-columns: 580px;
+        padding-inline: 4em;
+        scroll-padding-inline: 4em;
+      }
+
+      &__mate {
+        max-width: 580px;
+      }
+  
+      &__img {
+        min-width: 580px;
+        height: 535px;
+      }
+    } 
   }
 }
 
@@ -105,6 +143,49 @@
     &__img {
       min-width: 420px;
     }
+  }
+
+  @supports (-moz-appearance:none) {
+    .team {
+
+      .gallery__pagination {
+        display: flex;
+      }
+
+      .gallery__controls {
+        display: none;
+      }
+      
+      &__mates {
+        max-width: 1020px;
+        grid-auto-columns: 204px;
+        margin-inline: auto;
+        padding-inline: 0;
+        scroll-padding-inline: 0;
+      }
+
+      &__mate {
+        max-width: 200px;
+      }
+
+      &__name {
+        font-size: var(--fs-sm);
+      }
+
+      &__role {
+        font-size: var(--fs-xs);
+      }
+
+      &__bio {
+        min-height: 200px;
+        padding-inline: 1em;
+        font-size: var(--fs-xxs);
+      }
+  
+      &__img {
+        min-width: 200px;
+      }
+    } 
   }
 }
 
@@ -136,5 +217,33 @@
       padding-right: 1em;
       text-align: left;
     }
+  }
+
+  @supports (-moz-appearance:none) {
+    .team {
+
+      .gallery__pagination {
+        display: flex;
+      }
+
+      .gallery__controls {
+        display: none;
+      }
+      
+      &__mates {
+        max-width: 100%;
+        grid-auto-columns: 380px;
+        padding-inline: 4em;
+        scroll-padding-inline: 4em;
+      }
+
+      &__mate {
+        max-width: 380px;
+      }
+  
+      &__img {
+        min-width: 380px;
+      }
+    } 
   }
 }
