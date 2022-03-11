@@ -1,6 +1,7 @@
 import '../styles/style.scss';
 import { Gallery, OwlCarousel } from './gallery.js';
 import FormValidator from './form.js';
+import Accordion from './accordion.js';
 
 /**
  * @function indexGalleries
@@ -245,3 +246,7 @@ const entryValidator = new FormValidator(FORM, FIELDS, '+7');
  * Initializes form validation
  */
 entryValidator.initialize();
+
+document.querySelectorAll('details').forEach((el) => {
+  new Accordion(el);
+});
