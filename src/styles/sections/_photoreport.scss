@@ -67,5 +67,15 @@
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       padding-inline: 9.264em;
     }
+
+    &__snapshot {
+      pointer-events: auto;
+      cursor: pointer;
+      transition: transform var(--delay);
+
+      &:hover {
+        transform: scale(.8);
+      }
+    }
   }
 }

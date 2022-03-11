@@ -59,6 +59,20 @@
       height: 6px;
       border-radius: 100%;
       background-color: var(--text-clr-body);
+      animation-duration: 2s;
+      animation-name: pointBlink;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
+
+  @keyframes pointBlink {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
     }
   }
 }
