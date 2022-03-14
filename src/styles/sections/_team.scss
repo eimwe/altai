@@ -3,12 +3,8 @@
   padding-block-end: 4.375em;
   background-color: var(--bg-clr-section);
 
-  .gallery__controls {
-    display: none;
-  }
-
-  .gallery__slide--active {
-    align-self: center;
+  .slick-center,
+  .slick-current {
 
     .team__img {
       clip-path: inset(0 0);
@@ -19,22 +15,16 @@
     }
   }
 
-  &__mates {
-    grid-auto-columns: 280px;
-    align-items: center;
-    gap: 1em;
-    margin-block-end: 1.5em;
-    padding-inline: 2.8em;
-    scroll-padding-inline: 2.8em;
+  .slick-dots {
+    margin-top: 1.5em;
   }
 
   &__mate {
     margin: 0;
-    scroll-snap-align: center;
   }
 
   &__img {
-    min-width: 280px;
+    min-width: 260px;
     max-height: 420px;
     aspect-ratio: 1 / 2;
     object-fit: cover;
@@ -43,7 +33,8 @@
   }
 
   &__bio {
-    min-height: 140px;
+    min-height: 150px;
+    padding-inline: .75em;
     margin-block-start: 1.5em;
     text-align: center;
     opacity: 0;
@@ -72,7 +63,7 @@
     .team {
 
       &__img {
-        height: 420px;
+        height: 535px;
       }
     }
   }
@@ -80,10 +71,6 @@
 
 @media only screen and (min-width: 600px) {
   .team {
-    
-    &__mates {
-      grid-auto-columns: 360px;
-    }
 
     &__img {
       min-width: 360px;
@@ -91,101 +78,27 @@
     }
 
     &__bio {
-      padding-inline: 2em;
+      padding-inline: 3em;
     }
-  }
-
-  @supports (-moz-appearance:none) {
-    .team {
-
-      .gallery__pagination {
-        display: flex;
-      }
-
-      .gallery__controls {
-        display: none;
-      }
-      
-      &__mates {
-        max-width: 100%;
-        grid-auto-columns: 580px;
-        padding-inline: 4em;
-        scroll-padding-inline: 4em;
-      }
-
-      &__mate {
-        max-width: 580px;
-      }
-  
-      &__img {
-        min-width: 580px;
-        height: 535px;
-      }
-    } 
   }
 }
 
 @media only screen and (min-width: 900px) {
   .team {
     padding-block-start: 4.8125em;
+
+    &__img {
+      min-width: 300px;
+    }
+
+    &__bio {
+      padding-inline: 1.5em;
+    }
     
     &__mates {
       max-width: 1020px;
-      grid-auto-columns: 420px;
       margin-inline: auto;
-      gap: 0;
     }
-
-    &__mate {
-      max-width: 420px;
-    }
-
-    &__img {
-      min-width: 420px;
-    }
-  }
-
-  @supports (-moz-appearance:none) {
-    .team {
-
-      .gallery__pagination {
-        display: flex;
-      }
-
-      .gallery__controls {
-        display: none;
-      }
-      
-      &__mates {
-        max-width: 1020px;
-        grid-auto-columns: 204px;
-        margin-inline: auto;
-        padding-inline: 0;
-        scroll-padding-inline: 0;
-      }
-
-      &__mate {
-        max-width: 200px;
-      }
-
-      &__name {
-        font-size: var(--fs-sm);
-      }
-
-      &__role {
-        font-size: var(--fs-xs);
-      }
-
-      &__bio {
-        min-height: 200px;
-        padding-inline: 1em;
-        font-size: var(--fs-xxs);
-      }
-  
-      &__img {
-        min-width: 200px;
-      }
-    } 
   }
 }
 
@@ -196,54 +109,33 @@
       margin-bottom: 1.4375em;
     }
 
-    .gallery__controls {
-      display: flex;
-      min-width: 1280px;
-      top: calc(50% - 100px);
-      left: 9.5%;
-    }
-
-    .gallery__pagination {
-      display: none;
-    }
-
-    &__mates {
-      max-width: 1200px;
+    &__img {
+      min-width: 420px;
     }
 
     &__bio {
-      min-height: 152px;
+      padding-inline: 1.5em;
+    }
+    
+    &__mates {
+      max-width: 1360px;
+      margin-inline: auto;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        right: -1px;
+        left: -1px;
+        border-left: 55px solid var(--bg-clr-section);
+        border-right: 55px solid var(--bg-clr-section);
+      }
+    }
+
+    &__bio {
       padding-left: 4em;
       padding-right: 1em;
       text-align: left;
     }
-  }
-
-  @supports (-moz-appearance:none) {
-    .team {
-
-      .gallery__pagination {
-        display: flex;
-      }
-
-      .gallery__controls {
-        display: none;
-      }
-      
-      &__mates {
-        max-width: 100%;
-        grid-auto-columns: 380px;
-        padding-inline: 4em;
-        scroll-padding-inline: 4em;
-      }
-
-      &__mate {
-        max-width: 380px;
-      }
-  
-      &__img {
-        min-width: 380px;
-      }
-    } 
   }
 }
