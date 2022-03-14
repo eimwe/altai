@@ -9,14 +9,14 @@ class Gallery {
    * @param {Number} delay - setting a slideshow interval in milliseconds
    * @param {Number} [galleryWidth] - gallery container width (optional)
    */
-  constructor(gallery, delay, galleryWidth) {
+  constructor(gallery, delay) {
     this.gallery = gallery;
     this.delay = delay;
     this.activeIndex = 0;
     this.numItems = this.gallery.children.length;
     this.interval = setInterval(() => this.next(), delay);
-    if(!galleryWidth) return;
-    this.galleryWidth = galleryWidth;
+    /*if(!galleryWidth) return;
+    this.galleryWidth = galleryWidth;*/
   }
   
   /**
@@ -56,9 +56,9 @@ class Gallery {
    * @returns {undefined}
    */
   showSlide() {
-    let innerSpace;
+    let innerSpace = this.gallery.offsetWidth;
 
-    if(!this.galleryWidth) {
+    /*if(!this.galleryWidth) {
       innerSpace = this.gallery.offsetWidth;
     } else {
       //magic numbers to calculate gallery spin step:
@@ -66,7 +66,7 @@ class Gallery {
       if (innerSpace < 0) {
         innerSpace = this.galleryWidth - this.gallery.offsetWidth;
       }
-    }
+    }*/
 
     let coord = parseInt(`${this.activeIndex}` * innerSpace);
     
@@ -96,8 +96,8 @@ class OwlCarousel extends Gallery {
    * @param {String} activePageClass - the active page class name
    * @param {HTMLElement} [counterCurrent] - current count number node (optional)
    */
-  constructor(gallery, delay, galleryWidth, activeSlideClass, pages, activePageClass, counterCurrent) {
-    super(gallery, delay, galleryWidth);
+  constructor(gallery, delay, activeSlideClass, pages, activePageClass, counterCurrent) {
+    super(gallery, delay);
     this.activeSlideClass = activeSlideClass;
     this.slides = Array.from(this.gallery.children);
     this.pages = Array.from(pages.children);
