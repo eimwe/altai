@@ -79,11 +79,6 @@ module.exports = {
           from: './images',
           to: './images',
         },
-        /*{
-          context: './src',
-          from: './scripts/teamGallery.js',
-          to: './scripts',
-        },*/
       ],
     }),
     new MiniCssExtractPlugin({
