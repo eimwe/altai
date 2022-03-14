@@ -1,0 +1,77 @@
+@use '../abstracts/mixins';
+
+.slick {
+
+  &-arrow {
+    position: absolute;
+    top: 36%;
+    z-index: 1;
+    min-width: 15px;
+    min-height: 27px;
+    font-size: 0;
+    background-color: transparent;
+    background-image: url('../images/shapes/gallery-control.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    outline: none;
+    transition: filter var(--delay), opacity var(--delay);
+
+    &:focus,
+    &:hover {
+      filter: drop-shadow(0 0 1px var(--text-clr-body));
+    }
+
+    &:active {
+      opacity: .3;
+      filter: none;
+    }
+  }
+
+  &-next {
+    right: 2%;
+  }
+
+  &-prev {
+    left: 2%;
+    transform: rotate(180deg);
+  }
+
+  &-dots {
+    @include mixins.reset_list;
+
+    display: flex;
+    justify-content: center;
+    gap: 1.75em;
+
+    li {
+
+      button {
+        @include mixins.sr_only;
+      }
+
+      min-width: 10px;
+      min-height: 10px;
+      border-radius: 100%;
+      background-color: var(--text-clr-body);
+    }
+
+    .slick-active {
+      transform: scale(2);
+      transition: transform var(--delay);
+      pointer-events: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .slick {
+    &-next {
+      right: 0;
+    }
+  
+    &-prev {
+      left: 0;
+    }
+  }
+}
