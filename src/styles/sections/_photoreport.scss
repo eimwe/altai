@@ -64,7 +64,6 @@
     }
 
     &__snapshots {
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       padding-inline: 9.264em;
     }
 
@@ -83,7 +82,25 @@
     .photoreport {
 
       &__snapshot {
-        height: 400px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .photoreport {
+
+    &__snapshots {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    @supports (-moz-appearance:none) {
+      .photoreport {
+  
+        &__snapshot {
+          height: 400px;
+        }
       }
     }
   }

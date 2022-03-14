@@ -104,10 +104,12 @@
 
     .gallery--schedule {
       margin-inline: 9.5em;
+      padding-inline: 1.75em;
     }
 
     .gallery__controls {
       padding-inline: 0;
+      right: 0;
     }
 
     .gallery__counter {
@@ -118,12 +120,22 @@
     }
 
     &__list {
-      margin-inline: 5.75em;
+      margin-inline: 0;
+      gap: 1em;
     }
 
     &__img {
       min-height: 336px;
       max-width: 472px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .schedule {
+
+    .gallery--schedule {
+      padding-inline: 5em;
     }
   }
 }
