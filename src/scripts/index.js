@@ -175,9 +175,11 @@ scheduleSlider.countPages(scheduleCountCurrent);
  * @member {HTMLElement}
  */
  let teamGallery = document.querySelector('.team__mates'),
+     teamGalleryWrapper = document.querySelector('.gallery--team'),
      teamPages = document.querySelector('.gallery--team .gallery__pagination'),
      teamNext = document.querySelector('.gallery--team .gallery__control--next'),
-     teamPrev = document.querySelector('.gallery--team .gallery__control--prev');
+     teamPrev = document.querySelector('.gallery--team .gallery__control--prev'),
+     galleryWidth = parseInt(window.getComputedStyle(teamGalleryWrapper, '::after').width);
 
 /**
  * Enumerated team gallery slides
@@ -198,7 +200,7 @@ scheduleSlider.countPages(scheduleCountCurrent);
 const teamSlider = new OwlCarousel(
   teamGallery,
   5000,
-  teamGallery.children[0].offsetWidth,
+  galleryWidth,
   'gallery__slide--active',
   teamPages,
   'gallery__page--active',

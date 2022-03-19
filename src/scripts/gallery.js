@@ -61,11 +61,7 @@ class Gallery {
     if(!this.galleryWidth) {
       innerSpace = this.gallery.offsetWidth;
     } else {
-      //magic numbers to calculate gallery spin step:
-      innerSpace = (this.gallery.offsetWidth - this.galleryWidth) * 3;
-      if (innerSpace < 0) {
-        innerSpace = this.galleryWidth - this.gallery.offsetWidth;
-      }
+      innerSpace = this.galleryWidth;
     }
 
     let coord = parseInt(`${this.activeIndex}` * innerSpace);
