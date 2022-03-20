@@ -4,6 +4,23 @@ import FormValidator from './form.js';
 import Accordion from './accordion.js';
 
 /**
+ * @name IIFE
+ * @function
+ * @description self-executing anonymous function
+ * that sets current year in a footer copyright section
+ * @param {undefined}
+ * @returns {undefined}
+ */
+(() => {
+  let date = new Date(),
+      currentYearNode = document.querySelector('.copyright__year');
+
+  if (currentYearNode.textContent.length > 0) currentYearNode.textContent = '';
+
+  currentYearNode.appendChild(document.createTextNode(date.getFullYear()));
+})();
+
+/**
  * @function indexGalleries
  * @description enumerates slides and pages with the data-id attribute
  * @param {HTMLCollection} lists - a collection of HTML nodes
