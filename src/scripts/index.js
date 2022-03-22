@@ -58,6 +58,7 @@ showMenu();
  * @member {HTMLElement}
  */
 let snapshotGallery = document.querySelector('.photoreport__snapshots'),
+    snapshots = document.querySelectorAll('.photoreport__snapshot'),
     snapshotNext = document.querySelector('.gallery--photoreport .gallery__control--next'),
     snapshotPrev = document.querySelector('.gallery--photoreport .gallery__control--prev');
 
@@ -167,7 +168,7 @@ const scheduleSlider = new OwlCarousel(
  */
 scheduleNext.addEventListener('click', () => scheduleSlider.next());
 /**
- * Show next schedule gallery slide
+ * Show previous schedule gallery slide
  * @listens click
  * @fires prev
  */
@@ -228,7 +229,7 @@ const teamSlider = new OwlCarousel(
  */
  teamNext.addEventListener('click', () => teamSlider.next());
 /**
- * Show next team gallery slide
+ * Show previous team gallery slide
  * @listens click
  * @fires prev
  */
@@ -266,4 +267,116 @@ entryValidator.initialize();
 
 document.querySelectorAll('details').forEach((el) => {
   new Accordion(el);
+});
+
+/**
+ * Variables for a lightBox photo gallery
+ * @member {HTMLElement}
+ */
+ let lightboxGallery = document.querySelector('.gallery--lightbox .gallery__fullsized'),
+     lightboxThumbs = document.querySelector('.gallery--lightbox .gallery__thumbs'),
+     lightboxCountCurrent = document.querySelector('.gallery--lightbox .gallery__current'),
+     lightboxCountTotal = document.querySelector('.gallery--lightbox .gallery__total'),
+     lightboxNext = document.querySelector('.gallery--lightbox .gallery__control--next'),
+     lightboxPrev = document.querySelector('.gallery--lightbox .gallery__control--prev'),
+     lightboxCloseButton = document.querySelector('.modal--lightbox .btn--dismiss');
+
+/**
+ * Enumerated lightBox photo gallery slides
+ */
+indexGalleries(lightboxGallery);
+
+/**
+ * Enumerated lightBox photo gallery thumbnails
+ */
+indexGalleries(lightboxThumbs);
+
+/**
+ * @constant
+ * @default
+ * @memberof OwlCarousel
+ * @instance
+ */
+const lightboxSlider = new OwlCarousel(
+     lightboxGallery,
+     5000,
+     false,
+     'gallery__slide--active',
+     lightboxThumbs,
+     'gallery__thumb--active',
+     lightboxCountCurrent,
+     true);
+
+/**
+ * Show next lightBox photo gallery slide
+ * @listens click
+ * @fires next
+ */
+lightboxNext.addEventListener('click', () => lightboxSlider.next());
+/**
+ * Show previous lightBox photo gallery slide
+ * @listens click
+ * @fires prev
+ */
+lightboxPrev.addEventListener('click', () => lightboxSlider.prev());
+
+/**
+ * Enables thumbnail navigation
+ */
+lightboxSlider.navigatePage();
+
+/**
+ * Inserts total amount of lightBox photo gallery slides
+ */
+lightboxSlider.countTotal(lightboxCountTotal);
+/**
+ * Inserts starting lightBox photo gallery slide number
+ */
+lightboxSlider.countPages(lightboxCountCurrent);
+
+/**
+ * Creates initial caption for lightBox photo gallery
+ */
+lightboxSlider.createCaption(lightboxThumbs.children[0].getAttribute('alt'), lightboxThumbs);
+
+/**
+ * Polyfill for HTML <dialog> element
+ * @constant
+ * @default
+ */
+const lightboxDialogPolyfill = require('./dialog-polyfill');
+
+/**
+ * @constant
+ * @default
+ * @member {HTMLElement}
+ */
+const lightboxModal = document.querySelector('.modal--lightbox');
+ 
+/**
+ * Register lightbox modal node with polyfill
+ * @constant
+ * @default
+ * @memberof dialogPolyfill
+ * @instance
+ */
+lightboxDialogPolyfill.registerDialog(lightboxModal);
+ 
+/**
+ * Close modal on click at close button
+ * @listens click
+ * @fires lightboxModal.close
+ */
+lightboxCloseButton.addEventListener('click', () => lightboxModal.close());
+
+/**
+ * Distribute event listeners across all tiles in photoreport section
+ */
+snapshots.forEach((snapshot, index) => {
+  snapshot.addEventListener('click', (event) => {
+    lightboxModal.showModal();
+    lightboxSlider.activeIndex = index;
+    lightboxSlider.showSlide();
+    lightboxSlider.createCaption(event.target.getAttribute('alt'), lightboxThumbs);
+  });
 });
