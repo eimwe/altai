@@ -510,5 +510,46 @@
     </section>
     <button class="btn btn--confirm" type="button">Закрыть</button>
   </dialog>
+  <dialog class="modal modal--lightbox">
+    <button class="btn btn--dismiss" type="button">
+      <span class="modal__btn-name sr-only">Закрыть</span>
+    </button>
+    <div class="gallery gallery--lightbox">
+      <div class="gallery__controls flex-container">
+        <button class="gallery__control gallery__control--prev" type="button">
+          <span class="gallery__btn-name sr-only">Назад</span>
+        </button>
+        <button class="gallery__control gallery__control--next" type="button">
+          <span class="gallery__btn-name sr-only">Вперед</span>
+        </button>
+      </div>
+      <figure class="gallery__slides grid-container gallery__fullsized">
+        <img class="gallery__slide gallery__slide--active gallery__fullsize" src="./images/galleries/photoreport/snapshot-1.webp" alt="Лес">
+        <img class="gallery__slide gallery__fullsize" src="./images/galleries/photoreport/snapshot-2.webp" alt="Горы">
+        <img class="gallery__slide gallery__fullsize" src="./images/galleries/photoreport/snapshot-3.webp" alt="Единение с природой">
+        <img class="gallery__slide gallery__fullsize" src="./images/galleries/photoreport/snapshot-4.webp" alt="Поездка верхом на лошади">
+        <img class="gallery__slide gallery__fullsize" src="./images/galleries/photoreport/snapshot-5.webp" alt="Горный ручей">
+        <img class="gallery__slide gallery__fullsize" src="./images/galleries/photoreport/snapshot-6.webp" alt="Озеро">
+        <img class="gallery__slide gallery__fullsize" src="./images/galleries/photoreport/snapshot-7.webp" alt="Лошади">
+        <img class="gallery__slide gallery__fullsize" src="./images/galleries/photoreport/snapshot-8.webp" alt="Олень">
+        <img class="gallery__slide gallery__fullsize" src="./images/galleries/photoreport/snapshot-9.webp" alt="Чай с брусникой">
+      </figure>
+      <figure class="gallery__thumbs grid-container">
+        <img class="gallery__thumb gallery__thumb--active" src="./images/galleries/photoreport/thumbs/thumb-1.jpg" alt="Лес">
+        <img class="gallery__thumb" src="./images/galleries/photoreport/thumbs/thumb-2.jpg" alt="Горы">
+        <img class="gallery__thumb" src="./images/galleries/photoreport/thumbs/thumb-3.jpg" alt="Единение с природой">
+        <img class="gallery__thumb" src="./images/galleries/photoreport/thumbs/thumb-4.jpg" alt="Поездка верхом на лошади">
+        <img class="gallery__thumb" src="./images/galleries/photoreport/thumbs/thumb-5.jpg" alt="Горный ручей">
+        <img class="gallery__thumb" src="./images/galleries/photoreport/thumbs/thumb-6.jpg" alt="Озеро">
+        <img class="gallery__thumb" src="./images/galleries/photoreport/thumbs/thumb-7.jpg" alt="Лошади">
+        <img class="gallery__thumb" src="./images/galleries/photoreport/thumbs/thumb-8.jpg" alt="Олень">
+        <img class="gallery__thumb" src="./images/galleries/photoreport/thumbs/thumb-9.jpg" alt="Чай с брусникой">
+      </figure>
+      <div class="gallery__counter flex-container">
+        <span class="gallery__current">0</span>
+        <span class="gallery__total">0</span>
+      </div>
+    </div>
+  </dialog>
 </body>
 </html>
