@@ -7,7 +7,7 @@ class Gallery {
    * Create a gallery.
    * @param {HTMLElement} gallery - Gallery node
    * @param {Number} delay - setting a slideshow interval in milliseconds
-   * @param {Number} [galleryWidth] - gallery container width (optional)
+   * @param {Number|undefined} [galleryWidth] - gallery container width (optional)
    */
   constructor(gallery, delay, galleryWidth) {
     this.gallery = gallery;
@@ -91,12 +91,14 @@ class OwlCarousel extends Gallery {
    * Create an instance of Gallery.
    * @param {HTMLElement} gallery - Gallery node
    * @param {Number} delay - setting a slideshow interval in milliseconds
+   * @param {Number|undefined} [galleryWidth] - gallery container width (optional)
    * @param {String} activeSlideClass - the active slide class name
    * @param {HTMLCollection} pages - a collection of HTML pagination nodes
    * @param {String} activePageClass - the active page class name
    * @param {HTMLElement} [counterCurrent] - current count number node (optional)
+   * @param {Boolean|undefined} [lightBox] - lightBox gallery indicator (optional)
    */
-  constructor(gallery, delay, galleryWidth, activeSlideClass, pages, activePageClass, counterCurrent) {
+  constructor(gallery, delay, galleryWidth, activeSlideClass, pages, activePageClass, counterCurrent, lightBox) {
     super(gallery, delay, galleryWidth);
     this.activeSlideClass = activeSlideClass;
     this.slides = Array.from(this.gallery.children);
@@ -104,12 +106,15 @@ class OwlCarousel extends Gallery {
     this.activePageClass = activePageClass;
     if(!counterCurrent) return;
     this.counterCurrent = counterCurrent;
+    if(!lightBox) return;
+    this.lightBox = lightBox;
   }
 
   /**
    * @method prev
    * @description decreases activeIndex prop and toggles between pages and slides,
-   * refreshes current slide number in the counter
+   * refreshes current slide number in the counter (optional)
+   * creates caption for lightBox photo gallery (optional)
    * @see {@link toggleActive}
    * @param {undefined}
    * @returns {undefined}
@@ -120,12 +125,19 @@ class OwlCarousel extends Gallery {
     this.toggleActive(this.pages, this.activePageClass);
     if(!this.counterCurrent) return;
     this.countPages(this.counterCurrent);
+    if(!this.lightBox) return;
+    this.slides.forEach(slide => {
+      if(slide.classList.contains(this.activeSlideClass)) {
+        this.createCaption(slide.getAttribute('alt'), this.pages);
+      }
+    });
   }
 
   /**
    * @method next
    * @description increases activeIndex prop and toggles between pages and slides,
-   * refreshes current slide number in the counter
+   * refreshes current slide number in the counter (optional)
+   * creates caption for lightBox photo gallery (optional)
    * @see {@link toggleActive}
    * @param {undefined}
    * @returns {undefined}
@@ -136,6 +148,12 @@ class OwlCarousel extends Gallery {
     this.toggleActive(this.pages, this.activePageClass);
     if(!this.counterCurrent) return;
     this.countPages(this.counterCurrent);
+    if(!this.lightBox) return;
+    this.slides.forEach(slide => {
+      if(slide.classList.contains(this.activeSlideClass)) {
+        this.createCaption(slide.getAttribute('alt'), this.pages);
+      }
+    });
   }
 
   /**
@@ -158,7 +176,9 @@ class OwlCarousel extends Gallery {
   /**
    * @method navigatePage
    * @description shows slide according to the clicked page,
-   * refreshes current slide number in the counter
+   * toggles between active pages and slides,
+   * refreshes current slide number in the counter (optional)
+   * creates caption for lightBox photo gallery (optional)
    * @param {undefined}
    * @returns {undefined}
    */
@@ -172,6 +192,8 @@ class OwlCarousel extends Gallery {
         this.toggleActive(this.pages, this.activePageClass);
         if(!this.counterCurrent) return;
         this.countPages(this.counterCurrent);
+        if(!this.lightBox) return;
+        this.createCaption(event.target.getAttribute('alt'), this.pages);
       });
     });
   }
@@ -194,6 +216,28 @@ class OwlCarousel extends Gallery {
    */
   countTotal(totalSlideNode) {
     totalSlideNode.textContent = this.numItems;
+  }
+
+  /**
+   * @method createCaption
+   * @description creates caption text for lightBox photo gallery
+   * @param {String} captionText - string taken from an image 'alt' attribute
+   * @param {HTMLElement} galleryContainer - container to append caption text to
+   */
+  createCaption(captionText, galleryContainer) {
+    if(!captionText || captionText.length < 2) captionText = 'Фото ' + parseInt(this.activeIndex + 1);
+    
+    let captionNode = document.querySelector('.gallery__caption');
+
+    if(!captionNode) {
+      captionNode = document.createElement('FIGCAPTION');
+      captionNode.appendChild(document.createTextNode(captionText));
+      captionNode.classList.add('gallery__caption');
+      captionNode.setAttribute('aria-live', 'polite');
+      galleryContainer.insertBefore(captionNode, galleryContainer.firstChild);
+    }
+
+    captionNode.textContent = captionText;
   }
 }
 

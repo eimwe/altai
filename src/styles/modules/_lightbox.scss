@@ -1,0 +1,156 @@
+.gallery {
+
+  &__thumbs {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1em;
+  }
+
+  &__thumb {
+    transition: filter var(--delay), box-shadow var(--delay);
+    cursor: pointer;
+
+    &--active {
+      filter: opacity(.3);
+      pointer-events: none;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 4px 8px 0 var(--action-focus), 0 6px 20px 0 var(--action-active);
+    }
+  }
+
+  &__fullsized,
+  &__thumbs {
+    margin-inline: 0;
+    margin-block-end: 0;
+  }
+
+  &__fullsized {
+    place-items: center;
+  }
+
+  &__thumbs {
+    margin-block-start: 4em
+  }
+
+  &__fullsize {
+    aspect-ratio: 16 / 9;
+    object-fit: scale-down
+  }
+
+  &__caption {
+    position: absolute;
+    inset: 0;
+    max-height: 3%;
+    margin: auto;
+    text-align: center;
+    color: var(--text-clr-white);
+    transform: translateY(60px);
+  }
+
+  &--lightbox {
+
+    .gallery__controls {
+      top: 25%;
+    }
+
+    .gallery__counter {
+      position: absolute;
+      inset: auto 0 0 auto;
+      transform: translateY(-250px);
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .gallery {
+
+    &__thumbs {
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    }
+
+    &__fullsize {
+      height: 680px;
+    }
+
+    &__caption {
+      font-size: var(--fs-md);
+      transform: translateY(210px);
+    }
+
+    &--lightbox {
+  
+      .gallery__controls {
+        top: 32%;
+      }
+  
+      .gallery__counter {
+        transform: translateY(-300px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .gallery {
+
+    &__fullsize {
+      height: 740px;
+    }
+
+    &__caption {
+      transform: translateY(310px);
+    }
+
+    &--lightbox {
+  
+      .gallery__controls {
+        top: 40%;
+      }
+  
+      .gallery__counter {
+        transform: translateY(-160px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .gallery {
+
+    &__container {
+      grid-auto-flow: column;
+      gap: 4em;
+      margin-top: 2em;
+    }
+
+    &__fullsized {
+      margin-top: 0;
+    }
+
+    &__thumbs {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      place-content: center;
+      margin-top: 0;
+    }
+
+    &__caption {
+      transform: translate(-240px, -410px);
+      font-size: var(--fs-xl);
+    }
+
+    &--lightbox {
+  
+      .gallery__controls {
+        top: 50%;
+        min-width: 72.5%;
+      }
+  
+      .gallery__counter {
+        inset: auto;
+        transform: none;
+      }
+    }
+  }
+}
