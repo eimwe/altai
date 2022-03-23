@@ -10,7 +10,6 @@
     padding: .625em 2em;
     color: var(--text-clr-body);
     background-color: var(--text-clr-dark);
-    outline: none;
 
     &:focus,
     &:hover {
@@ -32,7 +31,6 @@
     font-weight: 700;
     color: var(--text-clr-dark);
     background-color: var(--text-clr-body);
-    outline: none;
 
     &:focus,
     &:hover {
@@ -52,7 +50,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     transform: rotate(45deg);
-    outline: none;
     transition: filter var(--delay), opacity var(--delay);
 
     &:focus,

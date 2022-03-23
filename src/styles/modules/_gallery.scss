@@ -29,14 +29,13 @@
   }
 
   &__control {
-    min-width: 15px;
-    min-height: 27px;
+    min-width: 60px;
+    min-height: 60px;
     background-color: transparent;
     background-image: url('../images/shapes/gallery-control.svg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center;
     cursor: pointer;
-    outline: none;
     transition: filter var(--delay), opacity var(--delay);
 
     &--prev {
@@ -100,6 +99,16 @@
       vertical-align: text-bottom;
       transform: rotate(20deg)
                  translate(-2px, -1px);
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .gallery {
+
+    &__control {
+      min-width: 40px;
+      min-height: 40px;
     }
   }
 }

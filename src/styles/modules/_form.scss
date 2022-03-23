@@ -27,6 +27,10 @@
     &--submit {
       padding-block: .44em;
       font-size: var(--fs-xl);
+
+      &:focus {
+        outline: auto;
+      }
     }
 
     &--invalid {
