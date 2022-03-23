@@ -2,6 +2,7 @@ import '../styles/style.scss';
 import { Gallery, OwlCarousel } from './gallery.js';
 import FormValidator from './form.js';
 import Accordion from './accordion.js';
+import { lightboxModal } from './modals.js';
 
 /**
  * @name IIFE
@@ -228,8 +229,7 @@ document.querySelectorAll('details').forEach((el) => {
      lightboxCountCurrent = document.querySelector('.gallery--lightbox .gallery__current'),
      lightboxCountTotal = document.querySelector('.gallery--lightbox .gallery__total'),
      lightboxNext = document.querySelector('.gallery--lightbox .gallery__control--next'),
-     lightboxPrev = document.querySelector('.gallery--lightbox .gallery__control--prev'),
-     lightboxCloseButton = document.querySelector('.modal--lightbox .btn--dismiss');
+     lightboxPrev = document.querySelector('.gallery--lightbox .gallery__control--prev');
 
 /**
  * Enumerated lightBox photo gallery slides
@@ -287,36 +287,6 @@ lightboxSlider.countPages(lightboxCountCurrent);
  * Creates initial caption for lightBox photo gallery
  */
 lightboxSlider.createCaption(lightboxThumbs.children[0].getAttribute('alt'), lightboxThumbs);
-
-/**
- * Polyfill for HTML <dialog> element
- * @constant
- * @default
- */
-const lightboxDialogPolyfill = require('./dialog-polyfill');
-
-/**
- * @constant
- * @default
- * @member {HTMLElement}
- */
-const lightboxModal = document.querySelector('.modal--lightbox');
- 
-/**
- * Register lightbox modal node with polyfill
- * @constant
- * @default
- * @memberof dialogPolyfill
- * @instance
- */
-lightboxDialogPolyfill.registerDialog(lightboxModal);
- 
-/**
- * Close modal on click at close button
- * @listens click
- * @fires lightboxModal.close
- */
-lightboxCloseButton.addEventListener('click', () => lightboxModal.close());
 
 /**
  * Distribute event listeners across all tiles in photoreport section
