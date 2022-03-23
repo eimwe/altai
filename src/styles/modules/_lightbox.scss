@@ -144,12 +144,24 @@
   
       .gallery__controls {
         top: 50%;
-        min-width: 72.5%;
+        min-width: 66%;
       }
   
       .gallery__counter {
         inset: auto;
         transform: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .gallery {
+
+    &--lightbox {
+  
+      .gallery__controls {
+        min-width: 72.5%;
       }
     }
   }
