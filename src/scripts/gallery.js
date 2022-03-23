@@ -7,16 +7,13 @@ class Gallery {
    * Create a gallery.
    * @param {HTMLElement} gallery - Gallery node
    * @param {Number} delay - setting a slideshow interval in milliseconds
-   * @param {Number|undefined} [galleryWidth] - gallery container width (optional)
    */
-  constructor(gallery, delay, galleryWidth) {
+  constructor(gallery, delay) {
     this.gallery = gallery;
     this.delay = delay;
     this.activeIndex = 0;
     this.numItems = this.gallery.children.length;
     this.interval = setInterval(() => this.next(), delay);
-    if(!galleryWidth) return;
-    this.galleryWidth = galleryWidth;
   }
   
   /**
@@ -56,17 +53,7 @@ class Gallery {
    * @returns {undefined}
    */
   showSlide() {
-    let innerSpace;
-
-    if(!this.galleryWidth) {
-      innerSpace = this.gallery.offsetWidth;
-    } else {
-      //magic numbers to calculate gallery spin step:
-      innerSpace = (this.gallery.offsetWidth - this.galleryWidth) * 3;
-      if (innerSpace < 0) {
-        innerSpace = this.galleryWidth - this.gallery.offsetWidth;
-      }
-    }
+    let innerSpace = this.gallery.offsetWidth;
 
     let coord = parseInt(`${this.activeIndex}` * innerSpace);
     
@@ -91,15 +78,14 @@ class OwlCarousel extends Gallery {
    * Create an instance of Gallery.
    * @param {HTMLElement} gallery - Gallery node
    * @param {Number} delay - setting a slideshow interval in milliseconds
-   * @param {Number|undefined} [galleryWidth] - gallery container width (optional)
    * @param {String} activeSlideClass - the active slide class name
    * @param {HTMLCollection} pages - a collection of HTML pagination nodes
    * @param {String} activePageClass - the active page class name
    * @param {HTMLElement} [counterCurrent] - current count number node (optional)
    * @param {Boolean|undefined} [lightBox] - lightBox gallery indicator (optional)
    */
-  constructor(gallery, delay, galleryWidth, activeSlideClass, pages, activePageClass, counterCurrent, lightBox) {
-    super(gallery, delay, galleryWidth);
+  constructor(gallery, delay, activeSlideClass, pages, activePageClass, counterCurrent, lightBox) {
+    super(gallery, delay);
     this.activeSlideClass = activeSlideClass;
     this.slides = Array.from(this.gallery.children);
     this.pages = Array.from(pages.children);

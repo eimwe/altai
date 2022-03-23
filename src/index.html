@@ -323,16 +323,8 @@
         <h2 class="level__title">Наша команда</h2>
       </div>
       <div class="gallery gallery--team">
-        <div class="gallery__controls flex-container">
-          <button class="gallery__control gallery__control--prev" type="button">
-            <span class="gallery__btn-name sr-only">Назад</span>
-          </button>
-          <button class="gallery__control gallery__control--next" type="button">
-            <span class="gallery__btn-name sr-only">Вперед</span>
-          </button>
-        </div>
-        <div class="gallery__slides grid-container team__mates">
-          <figure class="gallery__slide gallery__slide--active team__mate">
+        <div class="team__mates">
+          <figure class="team__mate">
             <img class="team__img" src="./images/galleries/team/wanderer.webp" alt="Фото Олега">
             <figcaption class="team__bio">
               <h3 class="team__name">Олег</h3>
@@ -342,7 +334,7 @@
               </cite>
             </figcaption>
           </figure>
-          <figure class="gallery__slide team__mate">
+          <figure class="team__mate">
             <img class="team__img" src="./images/galleries/team/storyteller.webp" alt="Фото Темира">
             <figcaption class="team__bio">
               <h3 class="team__name">Темир</h3>
@@ -352,7 +344,7 @@
               </cite>
             </figcaption>
           </figure>
-          <figure class="gallery__slide team__mate">
+          <figure class="team__mate">
             <img class="team__img" src="./images/galleries/team/guide.webp" alt="Фото Марины">
             <figcaption class="team__bio">
               <h3 class="team__name">Марина</h3>
@@ -362,7 +354,7 @@
               </cite>
             </figcaption>
           </figure>          
-          <figure class="gallery__slide team__mate">
+          <figure class="team__mate">
             <img class="team__img" src="./images/galleries/team/horsebreeder.webp" alt="Фото Поли">
             <figcaption class="team__bio">
               <h3 class="team__name">Поля</h3>
@@ -372,7 +364,7 @@
               </cite>
             </figcaption>
           </figure>
-          <figure class="gallery__slide team__mate">
+          <figure class="team__mate">
             <img class="team__img" src="./images/galleries/team/mascot.webp" alt="Фото Тупли">
             <figcaption class="team__bio">
               <h3 class="team__name">Тупля</h3>
@@ -380,23 +372,6 @@
             </figcaption>
           </figure>
         </div>
-        <ol class="gallery__pagination flex-container">
-          <li class="gallery__page gallery__page--active">
-            <span class="gallery__page-number sr-only">1</span>
-          </li>
-          <li class="gallery__page">
-            <span class="gallery__page-number sr-only">2</span>
-          </li>
-          <li class="gallery__page">
-            <span class="gallery__page-number sr-only">3</span>
-          </li>
-          <li class="gallery__page">
-            <span class="gallery__page-number sr-only">4</span>
-          </li>
-          <li class="gallery__page">
-            <span class="gallery__page-number sr-only">5</span>
-          </li>
-        </ol>
       </div>
     </section>
     <section class="photoreport" id="stills">
@@ -553,5 +528,7 @@
       </div>
     </div>
   </dialog>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

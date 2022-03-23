@@ -155,7 +155,6 @@ indexGalleries(schedulePages);
 const scheduleSlider = new OwlCarousel(
         scheduleGallery,
         5000,
-        false,
         'gallery__slide--active',
         schedulePages,
         'gallery__page--active',
@@ -189,58 +188,6 @@ scheduleSlider.countTotal(scheduleCountTotal);
 scheduleSlider.countPages(scheduleCountCurrent);
 
 /**
- * Variables for a team gallery
- * @member {HTMLElement}
- */
- let teamGallery = document.querySelector('.team__mates'),
-     teamPages = document.querySelector('.gallery--team .gallery__pagination'),
-     teamNext = document.querySelector('.gallery--team .gallery__control--next'),
-     teamPrev = document.querySelector('.gallery--team .gallery__control--prev');
-
-/**
- * Enumerated team gallery slides
- */
- indexGalleries(teamGallery);
-
- /**
-  * Enumerated team gallery pages
-  */
- indexGalleries(teamPages);
-
- /**
- * @constant
- * @default
- * @memberof OwlCarousel
- * @instance
- */
-const teamSlider = new OwlCarousel(
-  teamGallery,
-  5000,
-  teamGallery.children[0].offsetWidth,
-  'gallery__slide--active',
-  teamPages,
-  'gallery__page--active',
-  );
-
-/**
- * Show next team gallery slide
- * @listens click
- * @fires next
- */
- teamNext.addEventListener('click', () => teamSlider.next());
-/**
- * Show previous team gallery slide
- * @listens click
- * @fires prev
- */
- teamPrev.addEventListener('click', () => teamSlider.prev());
- 
-/**
- * Enables team gallery page navigation
- */
- teamSlider.navigatePage();
-
-/**
  * @constant
  * @default
  * @member {HTMLElement}
@@ -265,6 +212,9 @@ const entryValidator = new FormValidator(FORM, FIELDS, '+7');
  */
 entryValidator.initialize();
 
+/**
+ * Initiates an accordion animation in FAQ section
+ */
 document.querySelectorAll('details').forEach((el) => {
   new Accordion(el);
 });
@@ -300,7 +250,6 @@ indexGalleries(lightboxThumbs);
 const lightboxSlider = new OwlCarousel(
      lightboxGallery,
      5000,
-     false,
      'gallery__slide--active',
      lightboxThumbs,
      'gallery__thumb--active',
