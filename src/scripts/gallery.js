@@ -10,9 +10,10 @@ class Gallery {
    */
   constructor(gallery, delay) {
     this.gallery = gallery;
-    this.delay = delay;
     this.activeIndex = 0;
     this.numItems = this.gallery.children.length;
+    if(!delay) return;
+    this.delay = delay; 
     this.interval = setInterval(() => this.next(), delay);
   }
   

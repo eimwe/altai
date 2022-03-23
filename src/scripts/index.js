@@ -68,7 +68,7 @@ let snapshotGallery = document.querySelector('.photoreport__snapshots'),
  * @memberof Gallery
  * @instance
  */
-const snapshotSlider = new Gallery(snapshotGallery, 9000);
+const snapshotSlider = new Gallery(snapshotGallery, false);
 
 /**
  * Variable containing method to show next snapshotGallery slide
@@ -154,7 +154,7 @@ indexGalleries(schedulePages);
  */
 const scheduleSlider = new OwlCarousel(
         scheduleGallery,
-        5000,
+        false,
         'gallery__slide--active',
         schedulePages,
         'gallery__page--active',
@@ -249,7 +249,7 @@ indexGalleries(lightboxThumbs);
  */
 const lightboxSlider = new OwlCarousel(
      lightboxGallery,
-     5000,
+     false,
      'gallery__slide--active',
      lightboxThumbs,
      'gallery__thumb--active',
@@ -326,6 +326,8 @@ snapshots.forEach((snapshot, index) => {
     lightboxModal.showModal();
     lightboxSlider.activeIndex = index;
     lightboxSlider.showSlide();
+    lightboxSlider.countPages(lightboxCountCurrent);
+    lightboxSlider.toggleActive(lightboxSlider.pages, lightboxSlider.activePageClass);
     lightboxSlider.createCaption(event.target.getAttribute('alt'), lightboxThumbs);
   });
 });
