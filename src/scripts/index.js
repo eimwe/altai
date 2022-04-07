@@ -2,7 +2,7 @@ import '../styles/style.scss';
 import { Gallery, OwlCarousel } from './gallery.js';
 import FormValidator from './form.js';
 import Accordion from './accordion.js';
-import { lightboxModal } from './modals.js';
+import { lightboxModal, menuModal } from './modals.js';
 
 /**
  * @name IIFE
@@ -33,26 +33,17 @@ const indexGalleries = (lists) => {
 }
 
 /**
- * @function showMenu
- * @description shows/hides modal navbar by clicking menu button
- * @param {undefined}
- * @returns {undefined}
+ * Variable for a menu button
+ * @member {HTMLElement}
  */
-const showMenu = () => {
-  let menuButton = document.getElementById('menu-toggle'),
-      navbarNode = document.querySelector('.navbar');
+let menuButton = document.querySelector('.btn--menu');
 
-  menuButton.addEventListener('change', () => {
-
-    navbarNode.classList.add('navbar--opened');
-
-    if(!menuButton.checked) {
-      navbarNode.classList.remove('navbar--opened');
-    }
-  });
-}
-
-showMenu();
+/**
+ * Shows menu modal
+ * @listens click
+ * @fires menuModal.showModal
+ */
+menuButton.addEventListener('click', () => menuModal.showModal());
 
 /**
  * Variables for a snapshot gallery
