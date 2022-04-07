@@ -1,13 +1,7 @@
 @use '../abstracts/mixins';
 
 .navbar {
-  /* mobile styles only*/
-  position: absolute;
-  top: 40px;
-  right: 800px;
-  opacity: 0;
-  box-shadow: 2px 2px 8px 1px var(--text-clr-dark);
-  transition: opacity var(--delay);
+  display: none;
 
   &__container {
     @include mixins.reset_list;
@@ -16,11 +10,6 @@
     line-height: 1.13;
     letter-spacing: var(--tracking-h2);
     color: var(--text-clr-dark);
-
-    /* mobile styles only*/
-    flex-direction: column;
-    padding: 1.5em;
-    background-color: var(--text-clr-body);
   }
 
   &__item {
@@ -35,13 +24,7 @@
     }
   }
 
-  &--opened {
-    right: 48px;
-    opacity: 1;
-  }
-
   &__link {
-    //outline: none;
     transition: color 300ms, opacity 300ms;
 
     &:focus,
@@ -53,30 +36,36 @@
       opacity: .5;
     }
   }
-}
 
-@media only screen and (min-width: 600px) {
-  .navbar {
-    top: 70px;
+  &--modal {
+    display: block;
+    text-align: center;
+  }
 
-    &--opened {
-      right: 120px;
+  &__container--modal {
+    padding-inline: 4em;
+    margin-block-start: 9.125em;
+  }
+
+  &__item--modal {
+    margin-bottom: 1.875em;
+    font-size: calc(var(--fs-xs) + .125em);
+    color: var(--text-clr-body);
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
 
 @media only screen and (min-width: 900px) {
   .navbar {
+    display: flex;
     flex-grow: 1;
-    position: static;
-    opacity: 1;
-    box-shadow: none;
 
     &__container {
-      flex-direction: row;
+      flex-grow: 1;
       gap: 1.875em;
-      padding: 0;
-      background-color: transparent;
     }
 
     &__item--btn {
