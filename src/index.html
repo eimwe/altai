@@ -16,7 +16,7 @@
         <dt class="logo__heading">Altai nomads</dt>
         <dd class="logo__subheading">современные кочевники</dd>
       </dl>
-      <nav class="navbar">
+      <nav class="navbar" aria-label="Main">
         <ul class="navbar__container flex-container">
           <li class="navbar__item">
             <a class="navbar__link" href="#tour_profile" title="Посмотреть программу похода">
@@ -50,12 +50,9 @@
           </li>
         </ul>
       </nav>
-      <div class="menu-btn grid-container" role="menu" aria-label="Menu button" tabindex="0">
-        <input type="checkbox" id="menu-toggle">
-        <label class="menu-btn__label" for="menu-toggle">
-          <span class="menu-btn__desc sr-only">Меню</span>
-        </label>
-      </div>
+      <button class="btn btn--menu" type="button">
+        <span class="modal__btn-name sr-only">Меню</span>
+      </button>
     </div>
   </header>
   <main>
@@ -527,6 +524,45 @@
         <span class="gallery__total">0</span>
       </div>
     </div>
+  </dialog>
+  <dialog class="modal modal--menu">
+    <button class="btn btn--dismiss" type="button">
+      <span class="modal__btn-name sr-only">Закрыть</span>
+    </button>
+    <nav class="navbar navbar--modal" aria-label="Main">
+      <ul class="navbar__container navbar__container--modal">
+        <li class="navbar__item navbar__item--modal">
+          <a class="navbar__link" href="#tour_profile" title="Посмотреть программу похода">
+            Программа похода
+          </a>
+        </li>
+        <li class="navbar__item navbar__item--modal">
+          <a class="navbar__link" href="#our_company" title="Подробнее о нас">
+            О компании
+          </a>
+        </li>
+        <li class="navbar__item navbar__item--modal">
+          <a class="navbar__link" href="#our_team" title="Познакомиться с нашими гидами">
+            Команда
+          </a>
+        </li>
+        <li class="navbar__item navbar__item--modal">
+          <a class="navbar__link" href="#stills" title="Посмотреть фотоотчет с прошлого похода">
+            Галерея
+          </a>
+        </li>
+        <li class="navbar__item navbar__item--modal navbar__item--faq">
+          <a class="navbar__link" href="#common_questions" title="Узнать ответы на часто задаваемые вопросы">
+            Faq
+          </a>
+        </li>
+        <li class="navbar__item navbar__item--modal navbar__item--btn">
+          <a class="navbar__link btn btn--action btn--action-modal" href="#order_tour" title="Оставить заявку на участие в походе">
+            Хочу в поход!
+          </a>
+        </li>
+      </ul>
+    </nav>
   </dialog>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
