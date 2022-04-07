@@ -62,4 +62,41 @@
       filter: none;
     }
   }
+
+  &--menu {
+    min-width: 34px;
+    min-height: 34px;
+    background-color: transparent;
+    background-image: url('../images/shapes/hamburger-menu.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: filter var(--delay), opacity var(--delay);
+
+    &:focus,
+    &:hover {
+      filter: drop-shadow(0 0 1px var(--text-clr-body));
+    }
+  
+    &:active {
+      opacity: .5;
+      filter: none;
+    }
+  }
+
+  &--action-modal {
+    max-width: 200px;
+    padding-block: .72em;
+    margin-block-start: 6.778em;
+    margin-inline: auto;
+    font-size: calc(var(--fs-xs) + .125em);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .btn {
+
+    &--menu {
+      display: none;
+    }
+  }
 }

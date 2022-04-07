@@ -37,6 +37,12 @@
     }
   }
 
+  &--menu {
+    min-width: 100%;
+    min-height: 100vh;
+    padding-inline: 1.5em;
+  }
+
   &::backdrop {
     background: var(--bg-backdrop);
   }
