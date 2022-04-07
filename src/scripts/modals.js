@@ -67,4 +67,46 @@ let lightboxCloseButton = document.querySelector('.modal--lightbox .btn--dismiss
  */
 lightboxCloseButton.addEventListener('click', () => lightboxModal.close());
 
-export {confirmModal, lightboxModal};
+/**
+ * @constant
+ * @default
+ * @member {HTMLElement}
+ */
+ const menuModal = document.querySelector('.modal--menu');
+
+ /**
+ * Register menu modal node with dialog polyfill
+ * @constant
+ * @default
+ * @memberof dialogPolyfill
+ * @instance
+ */
+dialogPolyfill.registerDialog(menuModal);
+
+/**
+ * Variable for a menu modal close button
+ * @member {HTMLElement}
+ */
+ let menuCloseButton = document.querySelector('.modal--menu .btn--dismiss');
+
+ /**
+ * Variable for a menu modal items
+ * @member {HTMLElement}
+ */
+ let menuItems = document.querySelectorAll('.modal--menu .navbar__item--modal');
+
+ /**
+  * Close modal on click at close button
+  * @listens click
+  * @fires menuModal.close
+  */
+  menuCloseButton.addEventListener('click', () => menuModal.close());
+
+  /**
+  * Close modal on click at menu item
+  * @listens click
+  * @fires menuModal.close
+  */
+  menuItems.forEach(item => item.addEventListener('click', () => menuModal.close()));
+
+export {confirmModal, lightboxModal, menuModal};
