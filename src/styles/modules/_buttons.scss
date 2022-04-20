@@ -46,11 +46,17 @@
     min-width: 48px;
     min-height: 48px;
     background-color: transparent;
-    background-image: url('../images/shapes/crosshairs.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: rotate(45deg);
     transition: filter var(--delay), opacity var(--delay);
+    &::before {
+      content: '';
+      display: block;
+      min-width: 48px;
+      min-height: 48px;
+      background-image: url('../images/shapes/crosshairs.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotate(45deg);
+    }
 
     &:focus,
     &:hover {
