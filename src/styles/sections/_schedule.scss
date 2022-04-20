@@ -97,7 +97,6 @@
     .gallery__controls {
       display: flex;
       top: calc(50% - 64px);
-      padding-inline: .75em;
     }
 
     &__list {
@@ -137,7 +136,6 @@
 
     .gallery__controls {
       min-width: 1200px;
-      padding-inline: 0;
       right: -8%;
     }
 
@@ -170,6 +168,19 @@
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .schedule {
+
+    .gallery__controls {
+      right: -5%;
+    }
+
+    .gallery__counter {
+      right: 52.5%;
+    }
+  }
+}
+
 @media only screen and (min-width: 1500px) {
   .schedule {
 
@@ -196,11 +207,11 @@
 
     .gallery__controls {
       min-width: 1340px;
-      right: 8%;
+      right: 7.5%;
     }
 
     .gallery__counter {
-      right: 51%;
+      right: 50.5%;
     }
   }
 }
