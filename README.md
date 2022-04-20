@@ -3,12 +3,14 @@
 Here's my attempt at coding a landing page for tour promotion. It's made in Figma by Marinarty. I wrote more about her in the next section. And here are layout previews in `.png`:
 |📱 [Mobile layout](https://raw.githubusercontent.com/eimwe/altai/main/previews/375px.png)|🖥️ [Desktop layout](https://raw.githubusercontent.com/eimwe/altai/main/previews/1440px.png)|
 |---|---|
+
 I was honored to take part in this project and had an absolute blast making it.
 
 ## About the Web Designer
 
 Marinarty is a skillful Web Designer from France. I've had the privilege of working with her on the same team once. It was her who inspired me to choose a front-end development career path. She has a solid skillset in UX/UI design and website coding. Being a highly motivated and hard-working person, she strives for perfection. It's safe to say her destiny is to be par excellence in all of her endeavors.
 You can catch up with her projects here:
+
 [![](https://img.shields.io/badge/Behance-1769ff?style=for-the-badge&logo=behance&logoColor=white)](https://www.behance.net/tsiganoshace6a) [![](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Marinarty)
 
 ## Technology stack
