@@ -6,7 +6,8 @@ class Gallery {
   /**
    * Create a gallery.
    * @param {HTMLElement} gallery - Gallery node
-   * @param {Number} delay - setting a slideshow interval in milliseconds
+   * @param {(Number|Boolean)} delay - setting a slideshow interval in milliseconds
+   * or switching it off by passing 'false'
    */
   constructor(gallery, delay) {
     this.gallery = gallery;
@@ -78,12 +79,13 @@ class OwlCarousel extends Gallery {
   /**
    * Create an instance of Gallery.
    * @param {HTMLElement} gallery - Gallery node
-   * @param {Number} delay - setting a slideshow interval in milliseconds
+   * @param {(Number|Boolean)} delay - setting a slideshow interval in milliseconds
+   * or switching it off by passing 'false'
    * @param {String} activeSlideClass - the active slide class name
    * @param {HTMLCollection} pages - a collection of HTML pagination nodes
    * @param {String} activePageClass - the active page class name
-   * @param {HTMLElement} [counterCurrent] - current count number node (optional)
-   * @param {Boolean|undefined} [lightBox] - lightBox gallery indicator (optional)
+   * @param {HTMLElement} counterCurrent - current count number node (optional)
+   * @param {(Boolean|undefined)} lightBox - lightBox gallery indicator (optional)
    */
   constructor(gallery, delay, activeSlideClass, pages, activePageClass, counterCurrent, lightBox) {
     super(gallery, delay);
