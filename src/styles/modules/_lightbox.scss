@@ -6,11 +6,12 @@
   }
 
   &__thumb {
+    filter: opacity(.3);
     transition: filter var(--delay), box-shadow var(--delay);
     cursor: pointer;
 
     &--active {
-      filter: opacity(.3);
+      filter: opacity(1);
       pointer-events: none;
     }
 
