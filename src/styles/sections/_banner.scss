@@ -60,7 +60,7 @@
   &__subtitle {
     align-self: end;
     font-size: var(--fs-xxl);
-    transform: translate(-4px, -24px);
+    transform: translate(-39px, -24px);
   }
 
   &__redirector {
@@ -79,9 +79,31 @@
   }
 }
 
+@media only screen and (min-width: 390px) {
+  .banner {
+    
+    &__subtitle {
+      transform: translate(-47px, -24px);
+    }
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .banner {
+    
+    &__subtitle {
+      transform: translate(-59px, -24px);
+    }
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .banner {
     background-position-y: 25%, 0;
+
+    &__subtitle {
+      transform: translate(-11px, -38px);
+    }
   }
 }
 
@@ -114,6 +136,7 @@
     &__subtitle {
       writing-mode: vertical-rl;
       align-self: center;
+      font-size: 3vw;
       font-weight: 300;
       line-height: 0;
       transform: scale(-1, -1);
