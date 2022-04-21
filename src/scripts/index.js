@@ -198,7 +198,7 @@ const FIELDS = ['phone-number'];
  * @memberof FormValidator
  * @instance
  */
-const entryValidator = new FormValidator(FORM, FIELDS, '+7');
+const entryValidator = new FormValidator(FORM, FIELDS, '+1');
 /**
  * Initializes form validation
  */

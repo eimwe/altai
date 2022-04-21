@@ -447,20 +447,20 @@
     <section class="callback" id="order_tour">
       <div class="wrapper">
         <div class="level">
-          <h2 class="level__title">Оставить заявку</h2>
+          <h2 class="level__title">Sign up for the tour</h2>
           <p class="level__desc">
-            Оставьте ваш номер телефона, чтобы мы могли вам перезвонить и вместе спланировать ваш поход к горе Белуха.
+            Enter your phone number so we can call you back and plan your adventure to Mount Belukha together.
           </p>
         </div>
         <form class="form form--callback flex-container" action="#" method="post" id="callback-form">
           <input class="form__control form__control--phone" type="tel" id="phone-number" name="phoneNumber"
-          value="+7"
+          value="+1"
           maxlength="17"
-          placeholder="+7"
+          placeholder="+1"
           pattern="[+]{1}[0-9]{1}[(]{1}[0-9]{3}[)]{1}[-]{1}[0-9]{3}[-]{1}[0-9]{2}[-]{1}[0-9]{2}"
-          title="Введите только цифры, без указания кода страны"
+          title="Enter numbers only, no country code"
           required>
-          <input class="btn btn--confirm form__control form__control--submit" type="submit" value="Хочу в поход!">
+          <input class="btn btn--confirm form__control form__control--submit" type="submit" value="Let's ride!">
         </form>
       </div>
     </section>
@@ -472,16 +472,16 @@
   </footer>
   <dialog class="modal modal--confirm">
     <button class="btn btn--dismiss" type="button">
-      <span class="modal__btn-name sr-only">Закрыть</span>
+      <span class="modal__btn-name sr-only">Close</span>
     </button>
     <section class="level">
-      <h2 class="level__title">Заявка отправлена</h2>
-      <p class="level__desc">Ура! Вы уже почти стали кочевником!</p>
+      <h2 class="level__title">We've got your request</h2>
+      <p class="level__desc">Hooray! You're one step closer to becoming a nomad!</p>
       <p class="level__desc">
-        Совсем скоро кто-нибудь из команды перезвонит вам, чтобы ответить на вопросы и забронировать место в нашем ближайшем походе.
+        Someone from our team will call you back shortly to answer your questions and book a place for you on our next tour.
       </p>
     </section>
-    <button class="btn btn--confirm" type="button">Закрыть</button>
+    <button class="btn btn--confirm" type="button">Got it!</button>
   </dialog>
   <dialog class="modal modal--lightbox">
     <button class="btn btn--dismiss" type="button">
