@@ -214,7 +214,7 @@ class OwlCarousel extends Gallery {
    * @param {HTMLElement} galleryContainer - container to append caption text to
    */
   createCaption(captionText, galleryContainer) {
-    if(!captionText || captionText.length < 2) captionText = 'Фото ' + parseInt(this.activeIndex + 1);
+    if(!captionText || captionText.length < 2) captionText = 'Photo ' + parseInt(this.activeIndex + 1);
     
     let captionNode = document.querySelector('.gallery__caption');
 
