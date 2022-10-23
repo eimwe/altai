@@ -2,22 +2,20 @@
 
 .banner {
   min-height: 100vh;
-  background-image: url('../images/shapes/path-mobile.svg'),
-                    url('../images/backgrounds/banner-bg.webp');
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover;
-  background-position-x: 0, 40%;
-  background-position-y: 32%, 0;
+  background-image: url('../images/backgrounds/banner-bg.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 40%;
 
   &::after {
     content: '';
     display: block;
     width: 100%;
     min-height: 100px;
-    background-image: linear-gradient(0deg, 
-                      #333333 8.08%, 
-                      rgba(51, 51, 51, 0.46) 58.59%, 
-                      rgba(196, 196, 196, 0) 87.88%);
+    background-image: linear-gradient(
+      0deg,
+      #1E1F20 0%,
+      rgba(51, 51, 51, 0.2) 116.16%);
   }
 
   .grid-container {
@@ -29,38 +27,40 @@
     text-align: center;
   }
 
-  &__heading {
-    flex-direction: column;
-  }
-
   &__subheading {
     margin-block-start: 0;
-    margin-block-end: 1.2em;
+    margin-block-end: 1.5em;
     padding-inline: 2.2em;
     font-size: calc(var(--fs-xs) + .125rem);
     font-weight: 700;
     letter-spacing: var(--tracking-h2);
   }
 
+  &__heading {
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 270px;
+    margin-inline: auto;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: var(--leading-xs);
+  }
+
   &__title {
-    width: max-content;
     margin: 0;
     font-size: var(--fs-h1);
     font-weight: 800;
-    line-height: var(--leading-h1);
-    text-transform: uppercase;
-    background-image: linear-gradient(0deg, 
-                      #fff 50%, 
-                      rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.8) 57.26%,
+      rgba(255, 255, 255, 0) 89.45%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   &__subtitle {
-    align-self: end;
-    font-size: var(--fs-xxl);
-    transform: translate(-39px, -24px);
+    font-size: var(--fs-xxxl);
   }
 
   &__redirector {
@@ -81,65 +81,54 @@
 
 @media only screen and (min-width: 390px) {
   .banner {
-    
-    &__subtitle {
-      transform: translate(-47px, -24px);
-    }
-  }
-}
 
-@media only screen and (min-width: 400px) {
-  .banner {
-    
-    &__subtitle {
-      transform: translate(-59px, -24px);
+    &__heading {
+      line-height: 1.1;
     }
   }
 }
 
 @media only screen and (min-width: 600px) {
   .banner {
-    background-position-y: 25%, 0;
+    &::after {
+      background-image: none;
+    }
+
+    &__heading {
+      flex-direction: row;
+      gap: 20px;
+      max-width: 100%;
+    }
 
     &__subtitle {
-      transform: translate(-11px, -38px);
+      font-size: var(--fs-h1);
+      font-weight: 800;
+      background-image: linear-gradient(
+        0deg,
+       rgba(255, 255, 255, 0.8) 57.26%,
+       rgba(255, 255, 255, 0) 89.45%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+
+    &__subheading {
+      padding: 0;
+      margin: 0;
+      font-size: var(--fs-body);
+    }
+
+    &__redirector {
+      display: none;
+    }
+    
   }
 }
 
 @media only screen and (min-width: 900px) {
   .banner {
-    background-position-y: -20%, 0;
-
-    &__subheading,
-    &__redirector {
-      display: none;
-    }
-
-    &__subtitle {
-      transform: translate(-12px, -55px);
-    }
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .banner {
-    background-image: url('../images/shapes/path-desktop.svg'),
-                      url('../images/backgrounds/banner-bg.webp');
-    background-position-x: 0, 40%;
-    background-position-y: 26%, 0;
-
     &__heading {
-      flex-direction: row;
-    }
-
-    &__subtitle {
-      writing-mode: vertical-rl;
-      align-self: center;
-      font-size: 3vw;
-      font-weight: 300;
-      line-height: 0;
-      transform: scale(-1, -1);
+      gap: 40px;
     }
   }
 }

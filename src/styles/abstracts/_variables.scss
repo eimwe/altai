@@ -1,7 +1,7 @@
 :root {
   // Typography
   --fs-body: clamp(1rem, 1.25vw, 1.125rem);
-  --fs-h1: clamp(5.8125rem, 21vw, 20.1875rem);
+  --fs-h1: clamp(6.25rem, 14vw, 12.5rem);
   --fs-h2: 2.25rem;
   --fs-h3: 1.5rem;
   --fs-num: clamp(3.125rem, 4vw, 3.9375rem);
@@ -13,7 +13,9 @@
   --fs-lg: 1.75rem;
   --fs-xl: 1.875rem;
   --fs-xxl: clamp(1.6875rem, 4vw, 4rem);
+  --fs-xxxl: 3.9375rem;
 
+  --leading-xs: 0.9;
   --leading-body: 1.2;
   --leading-h1: 1.17;
   --leading-h2: 1.5;
