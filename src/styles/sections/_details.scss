@@ -1,5 +1,11 @@
 .details {
+  min-height: 830px;
   padding-block-start: 2.375em;
+  background-color: var(--bg-clr-section);
+
+  .level__title {
+    padding-inline: .3em;
+  }
 
   &__list {
     grid-template-columns: repeat(2, 1fr);
@@ -41,15 +47,14 @@
     position: relative;
     margin: 0;
     padding-inline: 1.25em;
-    transform: translate(-4px, -65px);
+    transform: translateY(20px);
   }
 
   &__nameplate {
     position: absolute;
     bottom: 20%;
     left: 47%;
-    font-weight: 600;
-    font-style: italic;
+    font-weight: 500;
 
     &::before {
       content: '';
@@ -79,30 +84,31 @@
 
 @media only screen and (min-width: 900px) {
   .details {
+    min-height: 700px;
     padding-block-start: 5.25em;
     padding-block-end: 2.75em;
 
     .level__desc {
-      padding-inline: 8em;
+      padding-inline: 11em;
     }
 
     &__container {
       display: flex;
-      gap: 4.125em;
+      gap: 4.375em;
       justify-content: center;
     }
 
     &__list {
-      height: min-content;
       align-self: center;
-      flex-basis: 480px;
-      gap: 3em 6em;
+      flex-shrink: 0;
+      gap: 3em 4em;
+      text-align: left;
       margin: 0;
     }
 
     &__destination {
       padding: 0;
-      transform: translate(0, -20px);
+      transform: none;
     }
   }
 }
@@ -112,7 +118,7 @@
     padding-block-end: 0;
 
     .level__desc {
-      padding-inline: 18em;
+      padding-inline: 19em;
     }
 
     &__container {
@@ -120,14 +126,9 @@
     }
 
     &__list {
-      flex-basis: auto;
       align-self: start;
-      column-gap: 9em;
-      margin-top: 2.5em;
-    }
-
-    &__destination {
-      transform: translateY(-80px);
+      gap: 2.8125em 4.8125em;
+      margin-top: 4.375em;
     }
   }
 }
