@@ -9,6 +9,10 @@
     letter-spacing: var(--tracking-h2);
   }
 
+  &__title--uppercase {
+    text-transform: uppercase;
+  }
+
   &__desc {
     margin-block-end: 0;
     color: var(--text-clr-white);

@@ -33,7 +33,7 @@
   }
 
   &__bio {
-    min-height: 150px;
+    min-height: 180px;
     padding-inline: .75em;
     margin-block-start: 1.5em;
     text-align: center;
@@ -104,6 +104,7 @@
 
 @media only screen and (min-width: 1200px) {
   .team {
+    background-color: var(--bg-clr-body);
 
     .level__title {
       margin-bottom: 1.4375em;
@@ -127,8 +128,8 @@
         inset: 0;
         right: -1px;
         left: -1px;
-        border-left: 55px solid var(--bg-clr-section);
-        border-right: 55px solid var(--bg-clr-section);
+        border-left: 55px solid var(--bg-clr-body);
+        border-right: 55px solid var(--bg-clr-body);
       }
     }
 

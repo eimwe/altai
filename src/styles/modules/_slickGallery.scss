@@ -52,12 +52,13 @@
       min-width: 10px;
       min-height: 10px;
       border-radius: 100%;
-      background-color: var(--text-clr-body);
+      background-color: var(--owl-page);
+      transition: transform var(--delay);
     }
 
     .slick-active {
+      background-color: var(--text-clr-body);
       transform: scale(2);
-      transition: transform var(--delay);
       pointer-events: none;
     }
   }
