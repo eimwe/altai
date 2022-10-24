@@ -19,10 +19,15 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
   }
+
+  &__fullsize {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   .photoreport {
+    background-color: var(--bg-clr-section);
     
     .gallery__controls {
       display: none;
@@ -38,6 +43,22 @@
 
     &__snapshot {
       pointer-events: auto;
+    }
+
+    &__fullsize {
+      display: block;
+      max-width: fit-content;
+      margin-left: auto;
+      margin-right: 1.375em;
+      color: var(--text-clr-white);
+      text-decoration: underline;
+      text-decoration-color: var(--text-clr-white);
+      text-underline-offset: 3px;
+      transition: text-decoration-color var(--delay);
+
+      &:hover {
+        text-decoration-color: transparent;
+      }
     }
   }
 }
@@ -62,6 +83,10 @@
     &__snapshots {
       padding-inline: 9.264em;
       padding-block-start: 4.25em;
+    }
+
+    &__fullsize {
+      margin-right: 9.264em;
     }
 
     &__snapshot {

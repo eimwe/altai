@@ -71,6 +71,7 @@
 
 @media only screen and (min-width: 600px) {
   .team {
+    background-color: var(--bg-clr-body);
 
     &__img {
       min-width: 360px;
@@ -104,7 +105,6 @@
 
 @media only screen and (min-width: 1200px) {
   .team {
-    background-color: var(--bg-clr-body);
 
     .level__title {
       margin-bottom: 1.4375em;

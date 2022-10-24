@@ -18,9 +18,9 @@
     color: var(--text-clr-white);
 
     &--quote {
-      padding-inline: 2.25em;
+      padding-inline: 4em;
       margin: 0;
-      text-align: left;
+      text-align: center;
     }
   }
 }
@@ -37,6 +37,7 @@
         margin-left: auto;
         font-size: var(--fs-md);
         font-style: italic;
+        text-align: left;
       }
     }
   }

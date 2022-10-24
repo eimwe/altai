@@ -52,7 +52,8 @@ menuButton.addEventListener('click', () => menuModal.showModal());
 let snapshotGallery = document.querySelector('.photoreport__snapshots'),
     snapshots = document.querySelectorAll('.photoreport__snapshot'),
     snapshotNext = document.querySelector('.gallery--photoreport .gallery__control--next'),
-    snapshotPrev = document.querySelector('.gallery--photoreport .gallery__control--prev');
+    snapshotPrev = document.querySelector('.gallery--photoreport .gallery__control--prev'),
+    snapshotTotal = document.querySelector('.photoreport__total');
 
 /**
  * @constant
@@ -116,6 +117,11 @@ const mediumMedia = window.matchMedia('(min-width: 600px)');
  * @see {@link stopSnapshotGallery}
  */
 mediumMedia.addEventListener('change', stopSnapshotGallery);
+
+/**
+ * Inserts total amount of photos in a snapshot gallery
+ */
+snapshotTotal.innerText = snapshots.length;
 
 /**
  * Variables for a schedule gallery
@@ -220,7 +226,8 @@ document.querySelectorAll('details').forEach((el) => {
      lightboxCountCurrent = document.querySelector('.gallery--lightbox .gallery__current'),
      lightboxCountTotal = document.querySelector('.gallery--lightbox .gallery__total'),
      lightboxNext = document.querySelector('.gallery--lightbox .gallery__control--next'),
-     lightboxPrev = document.querySelector('.gallery--lightbox .gallery__control--prev');
+     lightboxPrev = document.querySelector('.gallery--lightbox .gallery__control--prev'),
+     lightboxInit = document.querySelector('.gallery__slideshow');
 
 /**
  * Enumerated lightBox photo gallery slides
@@ -291,4 +298,12 @@ snapshots.forEach((snapshot, index) => {
     lightboxSlider.toggleActive(lightboxSlider.pages, lightboxSlider.activePageClass);
     lightboxSlider.createCaption(event.target.getAttribute('alt'), lightboxThumbs);
   });
+});
+
+/**
+ * Show lightbox modal by clicking on 'All photos' link
+ */
+lightboxInit.addEventListener('click', (event) => {
+  event.preventDefault();
+  lightboxModal.showModal();
 });
