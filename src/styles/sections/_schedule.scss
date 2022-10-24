@@ -1,5 +1,6 @@
 .schedule {
   padding-block-start: 3.375em;
+  padding-block-end: 4.625em;
   background-color: var(--bg-clr-section);
 
   .level {
@@ -12,13 +13,7 @@
   }
 
   .gallery__pagination {
-    position: absolute;
-    top: 50%;
-    left: calc(50% - 124px);
-  }
-
-  &__item {
-    gap: 5.625em;
+    margin-block-start: 2em;
   }
 
   &__header {
@@ -67,7 +62,7 @@
   .schedule {
 
     .gallery__pagination {
-      top: 35%;
+      margin-block-start: 0;
     }
 
     &__desc {
@@ -87,12 +82,8 @@
 
 @media only screen and (min-width: 900px) {
   .schedule {
-    padding-block-start: 4em;
-    padding-block-end: 6em;
-
-    .gallery__pagination {
-      position: static;
-    }
+    padding-block-start: 0;
+    padding-block-end: 5.375em;
 
     .gallery__controls {
       display: flex;
@@ -101,8 +92,8 @@
 
     &__list {
       margin-inline: 6.25em;
-      margin-top: 5.625em;
-      margin-bottom: 6.125em;
+      margin-top: 0;
+      margin-bottom: 4.25em;
     }
 
     &__item {
@@ -111,7 +102,12 @@
     }
 
     &__desc {
+      order: 2;
       padding-inline: 0;
+    }
+
+    &__img {
+      align-self: stretch;
     }
 
     @supports (-moz-appearance:none) {
@@ -128,6 +124,7 @@
 
 @media only screen and (min-width: 1200px) {
   .schedule {
+    padding-block-start: 4em;
 
     .gallery--schedule {
       margin-inline: 9.5em;
@@ -143,7 +140,7 @@
       display: block;
       position: absolute;
       bottom: 26%;
-      right: 55%;
+      right: 3%;
     }
 
     &__list {
@@ -152,8 +149,7 @@
     }
 
     &__img {
-      min-height: 336px;
-      max-width: 472px;
+      max-width: 518px;
     }
 
     @supports (-moz-appearance:none) {
@@ -161,7 +157,7 @@
   
         &__img {
           height: 336px;
-          max-width: 472px;
+          max-width: 518px;
         }
       }
     }
@@ -173,10 +169,6 @@
 
     .gallery__controls {
       right: -5%;
-    }
-
-    .gallery__counter {
-      right: 52.5%;
     }
   }
 }
@@ -193,7 +185,7 @@
     }
 
     .gallery__counter {
-      right: 51.5%;
+      right: 7%;
     }
   }
 }
@@ -211,7 +203,7 @@
     }
 
     .gallery__counter {
-      right: 50.5%;
+      right: 16%;
     }
   }
 }

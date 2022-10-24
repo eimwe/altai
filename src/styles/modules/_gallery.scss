@@ -69,11 +69,12 @@
     min-width: 10px;
     min-height: 10px;
     border-radius: 100%;
-    background-color: var(--text-clr-body);
+    background-color: var(--owl-page);
+    transition: transform var(--delay);
 
     &--active {
+      background-color: var(--text-clr-body);
       transform: scale(2);
-      transition: transform var(--delay);
       pointer-events: none;
     }
   }
@@ -117,16 +118,7 @@
   .gallery {
 
     &__pagination {
-      gap: 5.5em;
-
-      &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        min-width: 776px;
-        min-height: 1px;
-        background-color: var(--text-clr-body);
-      }
+      gap: 1.625em;
     }
 
     &__page {
