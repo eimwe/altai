@@ -25,11 +25,11 @@
   }
 
   &__link {
-    transition: color 300ms, opacity 300ms;
+    transition: opacity 300ms;
 
     &:focus,
     &:hover {
-      color: var(--text-clr-black);
+      opacity: .8;
     }
   
     &:active {
@@ -68,20 +68,8 @@
       gap: 1.875em;
     }
 
-    &__item--btn {
-      margin-left: auto;
-    }
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .navbar {
-
-    &__item {
-
-      &:first-of-type {
-        margin-left: auto;
-      }
+    &__link {
+      font-weight: 600;
     }
   }
 }
