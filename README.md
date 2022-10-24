@@ -1,7 +1,7 @@
 # Altai by Marinarty
 
-Here's my attempt at coding a landing page for tour promotion. It's made in Figma by Marinarty. I wrote more about her in the next section. And here are layout previews in `.png`:
-|📱 [Mobile layout](https://raw.githubusercontent.com/eimwe/altai/main/previews/375px.png)|🖥️ [Desktop layout](https://raw.githubusercontent.com/eimwe/altai/main/previews/1440px.png)|
+This is a landing page for tour promotion made in Figma by Marinarty. I wrote more about the designer in the next section. And here are layout previews in `.png`:
+|📱 [Mobile layout](https://raw.githubusercontent.com/eimwe/altai/main/previews/375px.jpg)|🖥️ [Desktop layout](https://raw.githubusercontent.com/eimwe/altai/main/previews/1440px.jpg)|
 |---|---|
 
 I was honored to take part in this project and had an absolute blast making it.
