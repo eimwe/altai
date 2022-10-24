@@ -3,7 +3,7 @@
   padding-block-end: 4.75em;
 
   .level {
-    padding-inline: 5.25em;
+    padding-inline: 2em;
   }
 
   &__item {
@@ -86,6 +86,7 @@
 
 @media only screen and (min-width: 600px) {
   .faq {
+    background-color: var(--bg-clr-section);
     
     &__question {
       padding-left: 2.5em;
@@ -123,7 +124,7 @@
     }
 
     &__answer {
-      padding-right: 21em;
+      padding-right: 28em;
     }
   }
 }

@@ -7,6 +7,10 @@
   background-size: cover;
   background-position-x: 60%;
 
+  .level__title {
+    padding-inline: 1.75em;
+  }
+
   .level__desc {
     color: var(--text-clr-body);
   }
@@ -17,13 +21,14 @@
     padding-block-start: 6.5625em;
 
     .level__desc {
-      padding-inline: 8em;
+      padding-inline: 11em;
     }
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .callback {
+    min-height: 780px;
     background-position-y: 50%;
 
     .level__title {
@@ -31,7 +36,7 @@
     }
 
     .level__desc {
-      padding-inline: 16em;
+      padding-inline: 20em;
     }
   }
 }
